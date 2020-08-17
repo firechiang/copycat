@@ -1,0 +1,6 @@
+#### [一、Android Studio 搭建以及相关配置](https://github.com/firechiang/copycat/blob/master/docs/android_studio_created.md)
+#### [二、创建根项目](https://github.com/firechiang/copycat/blob/master/docs/android_project_created.md)
+#### [三、创建根项目的手机或平板模块（就是Android项目主模块）](https://github.com/firechiang/copycat/blob/master/docs/android_master_module_created.md)
+#### [四、创建根项目的依赖模块（就是Android项目的工具模块）](https://github.com/firechiang/copycat/blob/master/docs/android_lib_module_created.md)
+#### [五、修改项目JDK地址（注意：如果不修改的话可能会报和Gradle使用的JRE不一致）](https://github.com/firechiang/copycat/blob/master/docs/android_studio_jdk.md)
+#### [六、项目清除缓存依赖重新加载所有依赖，相当于刷新整个项目（注意：因为是重新加载所有依赖所以可能会有点慢）](https://github.com/firechiang/copycat/blob/master/docs/android_project_refresh.md)

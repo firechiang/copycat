@@ -1,0 +1,34 @@
+/**
+ * 版本以及依赖相关配置
+ */
+ext {
+    android = [
+            compileSdkVersion:  29,
+            buildToolsVersion:  "29.0.3",
+            minSdkVersion    :  19,
+            targetSdkVersion :  29,
+            versionCode      :  1,
+            versionName      :  "1.0",
+            androidJUnitRunner: "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    dependenciesVersion = [
+            buildGradle:         "3.6.3",
+            appcompat:           "1.1.0",
+            junit:               "4.12",
+            androidTestJunit:    "1.1.1",
+            androidTestEspresso: "3.2.0",
+            constraintlayout:    "1.1.3",
+            magicIndicator:      "1.5.0"
+    ]
+
+    dependenciesLib = [
+            buildGradle:             "com.android.tools.build:gradle:${dependenciesVersion.buildGradle}",
+            appcompat:               "androidx.appcompat:appcompat:${dependenciesVersion.appcompat}",
+            junit:                   "junit:junit:${dependenciesVersion.junit}",
+            androidTestJunit:        "androidx.test.ext:junit:${dependenciesVersion.androidTestJunit}",
+            androidTestEspressoCore: "androidx.test.espresso:espresso-core:${dependenciesVersion.androidTestEspresso}",
+            constraintlayout:        "androidx.constraintlayout:constraintlayout:${dependenciesVersion.constraintlayout}",
+            magicIndicator:          "com.github.hackware1993:MagicIndicator:${dependenciesVersion.magicIndicator}"
+    ]
+}

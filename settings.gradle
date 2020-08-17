@@ -1,0 +1,4 @@
+rootProject.name='copycat'
+include ':copycat_voice'
+include ':copycat_audio'
+include ':copycat_video'

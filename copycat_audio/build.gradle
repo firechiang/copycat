@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+// 引入maven插件（用于上传包到私服）
+apply plugin:'maven'
+// 定义变量（注意： this.getName() 是获取当前模块的名称）
+def pomName = this.getName()
+version = '1.0.0-SNAPSHOT'
+description '音乐播放库'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        testInstrumentationRunner rootProject.android.androidJUnitRunner
+        // Android aar包中增加独立的混淆配置
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // 打包混淆配置所在文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.dependenciesLib.appcompat
+    testImplementation rootProject.dependenciesLib.junit
+    androidTestImplementation rootProject.dependenciesLib.androidTestJunit
+    androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore
+}
+

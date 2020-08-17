@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.firechiang.android_copycat.voice"
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        testInstrumentationRunner rootProject.android.androidJUnitRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // 打包混淆配置所在文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.dependenciesLib.appcompat
+    implementation rootProject.dependenciesLib.constraintlayout
+    testImplementation rootProject.dependenciesLib.junit
+    androidTestImplementation rootProject.dependenciesLib.androidTestJunit
+    androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore
+
+    compile rootProject.dependenciesLib.magicIndicator
+}

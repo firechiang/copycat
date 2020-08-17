@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 构建工具使用（注意：这个里面的代码是最先被调用的）
+buildscript {
+    // 引入版本以及依赖相关配置
+    apply from: file("config.gradle")
+    
+    repositories {
+        //google()
+        //mavenCentral()
+        //jcenter()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        // 用于加载 net.lucode.hackware.magicindicator.MagicIndicator 插件
+        maven { url "https://jitpack.io" }
+        // 私服（注意：下面的几个变量定义在 gradle.properties 配置文件里面）
+        maven {
+            url nexus_repositories_url
+            credentials {
+                username nexus_username
+                password nexus_password
+            }
+        }
+    }
+    dependencies {
+        classpath dependenciesLib.buildGradle
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+// 工程使用
+allprojects {
+    repositories {
+        //google()
+        //mavenCentral()
+        //jcenter()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        // 用于加载 net.lucode.hackware.magicindicator.MagicIndicator 插件
+        maven { url "https://jitpack.io" }
+        // 私服（注意：下面的几个变量定义在 gradle.properties 配置文件里面）
+        maven {
+            url nexus_repositories_url
+            credentials {
+                username nexus_username
+                password nexus_password
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
