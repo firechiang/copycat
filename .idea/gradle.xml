@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/copycat_audio" />
+            <option value="$PROJECT_DIR$/copycat_helloword" />
             <option value="$PROJECT_DIR$/copycat_video" />
             <option value="$PROJECT_DIR$/copycat_voice" />
           </set>
