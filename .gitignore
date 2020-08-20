@@ -6,6 +6,7 @@
 
 # gradle ignore
 .gradle
+build
 
 # Local configuration files (sdk path, etc)
 local.properties
