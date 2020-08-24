@@ -1,3 +1,5 @@
+<!-- 常量配置 -->
 <resources>
+    <!-- 可使用 @string/app_name 获取该值 -->
     <string name="app_name">copycat_helloword</string>
 </resources>
