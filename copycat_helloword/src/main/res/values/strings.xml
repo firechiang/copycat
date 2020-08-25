@@ -2,4 +2,7 @@
 <resources>
     <!-- 可使用 @string/app_name 获取该值 -->
     <string name="app_name">copycat_helloword</string>
+    <!-- 可使用 @string/simulation_download 获取该值 -->
+    <string name="simulation_download">模拟下载</string>
+    <string name="button_download">下载</string>
 </resources>
