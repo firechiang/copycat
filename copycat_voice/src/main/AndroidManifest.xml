@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.firechiang.android_copycat.voice">
+    package="com.firechiang.android.copycat_voice">
 
     <application
         android:allowBackup="true"
