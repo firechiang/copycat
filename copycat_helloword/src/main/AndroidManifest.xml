@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.firechiang.android.copycat_helloword">
 
     <application
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!-- name（主界面Activity，点代表package（包名），也可以写全路径包名）,label（主界面名称） -->
-        <activity android:name=".Activity03LifeCycle" android:label="@string/app_name">
+        <activity android:name=".Activity04Dialog01" android:label="@string/app_name">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -18,9 +19,10 @@
                 <!-- android.intent.category.LAUNCHER（应用分类，让应用图标显示在主界面分类里面） -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 配置一个能被其它Activity启动的Activity -->
-        <activity android:name=".Activity02LinearLayout02" android:label="跳转界面"/>
+        </activity> <!-- 配置一个能被其它Activity启动的Activity -->
+        <activity android:name=".Activity02LinearLayout02" android:label="跳转界面" />
+        <!-- @style/Theme.AppCompat.Dialog（弹出框形式的界面） -->
+        <activity android:name=".Activity04Dialog02" android:label="弹出框" android:theme="@style/Theme.AppCompat.Dialog" />
     </application>
 
 </manifest>
