@@ -10,7 +10,7 @@ import android.widget.EditText;
 /**
  * 测试跳转到当前Activity再返回到上一个Activity
  */
-public class Activity0201LinearLayout extends Activity {
+public class Activity02LinearLayout02 extends Activity {
 
     private EditText editSecondMsessage;
 
@@ -21,7 +21,7 @@ public class Activity0201LinearLayout extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity0201_linear_layout);
+        setContentView(R.layout.activity02_linear_layout02);
         // 获取输入框视图
         this.editSecondMsessage = findViewById(R.id.edit_second_message);
         // 获取到跳转过来的意图对象

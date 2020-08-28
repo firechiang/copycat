@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * 测试跳转到另一个Activity并监听回调
  */
-public class Activity02LinearLayout extends AppCompatActivity implements View.OnClickListener {
+public class Activity02LinearLayout01 extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editMainMsessage;
 
@@ -24,7 +24,7 @@ public class Activity02LinearLayout extends AppCompatActivity implements View.On
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 设置主界面布局文件
-        setContentView(R.layout.activity02_linear_layout);
+        setContentView(R.layout.activity02_linear_layout01);
         // 获取输入框视图
         this.editMainMsessage = findViewById(R.id.edit_main_message);
         // 获取两个按钮
@@ -45,7 +45,7 @@ public class Activity02LinearLayout extends AppCompatActivity implements View.On
         // 跳转界面
         if (viewId == R.id.btn_main_start1) {
             // 创建一个意图对象（要跳转到另一个Activity）
-            Intent intent = new Intent(this,Activity0201LinearLayout.class);
+            Intent intent = new Intent(this, Activity02LinearLayout02.class);
             // 获取输入框里面的数据
             String message = this.editMainMsessage.getText().toString();
             // 跳转过去携带的数据，在另一个Activity里面可以获取到
@@ -56,7 +56,7 @@ public class Activity02LinearLayout extends AppCompatActivity implements View.On
         // 带回调跳转界面（就是调整界面完成后再回调当前Activity的onActivityResult函数）
         if(viewId == R.id.btn_main_start2) {
             // 创建一个意图对象（要跳转到另一个Activity）
-            Intent intent = new Intent(this,Activity0201LinearLayout.class);
+            Intent intent = new Intent(this, Activity02LinearLayout02.class);
             // 获取输入框里面的数据
             String message = this.editMainMsessage.getText().toString();
             // 跳转过去携带的数据，在另一个Activity里面可以获取到

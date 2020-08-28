@@ -44,28 +44,4 @@ public class Activity01SimulationDownload extends AppCompatActivity {
             }
         });
     }
-
-    /**
-     * 界面启动时调用
-     */
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    /**
-     * 界面停止时调用
-     */
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    /**
-     * 界面销毁时调用
-     */
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }

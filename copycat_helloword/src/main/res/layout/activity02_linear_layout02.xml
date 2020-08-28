@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity0201LinearLayout">
+    tools:context=".Activity02LinearLayout02">
 
     <!-- match_parent（全部），wrap_content(自适应) -->
     <EditText
