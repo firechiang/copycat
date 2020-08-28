@@ -2,7 +2,6 @@ package com.firechiang.android.copycat_helloword;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -44,5 +43,29 @@ public class Activity01SimulationDownload extends AppCompatActivity {
                 buttonDownload.setText("正在下载中...");
             }
         });
+    }
+
+    /**
+     * 界面启动时调用
+     */
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    /**
+     * 界面停止时调用
+     */
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    /**
+     * 界面销毁时调用
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

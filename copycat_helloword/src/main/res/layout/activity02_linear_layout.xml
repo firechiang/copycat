@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- androidx.appcompat.widget.LinearLayoutCompat 线性布局，vertical（垂直） -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".Activity02LinearLayout">
+
+    <!-- match_parent（全部），wrap_content(自适应) -->
+    <EditText
+        android:id="@+id/edit_main_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入跳转界面时要携带的数据"/>
+
+    <!-- wrap_content(自适应) -->
+    <Button
+        android:id="@+id/btn_main_start1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转界面"
+        />
+
+    <!-- wrap_content(自适应) -->
+    <Button
+        android:id="@+id/btn_main_start2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带回调跳转界面"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

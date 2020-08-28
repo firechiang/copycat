@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 应用相关配置，package(指定应用的包名)-->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.firechiang.android.copycat_helloword">
-    <!-- icon(应用图标)，label（应用名称），theme（引用主题） -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.firechiang.android.copycat_helloword">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- name（主界面Activity，点代表package（包名），也可以写全路径包名）,label（主界面名称）-->
-        <activity android:name=".Activity01SimulationDownload" android:label="@string/app_name">
+        <!-- name（主界面Activity，点代表package（包名），也可以写全路径包名）,label（主界面名称） -->
+        <activity android:name=".Activity02LinearLayout" android:label="@string/app_name">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -19,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 配置一个能被其它Activity启动的Activity -->
+        <activity android:name=".Activity0201LinearLayout" android:label="跳转界面"/>
     </application>
 
 </manifest>

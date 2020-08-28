@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- androidx.appcompat.widget.LinearLayoutCompat 线性布局，vertical（垂直） -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity0201LinearLayout">
+
+    <!-- match_parent（全部），wrap_content(自适应) -->
+    <EditText
+        android:id="@+id/edit_second_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入返回要携带的数据"/>
+
+    <!-- wrap_content(自适应)，back01=回调函数（注意这个函数一定要写在当前Activity里面） -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:onClick="back01"
+        />
+
+    <!-- wrap_content(自适应)，back02=回调函数（注意这个函数一定要写在当前Activity里面） -->
+    <Button
+        android:id="@+id/btn_second_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带结果返回"
+        android:onClick="back02"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
