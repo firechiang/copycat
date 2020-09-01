@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * 测试点击按钮弹出Dialog
+ * 测试点击按钮弹出Dialog(注意：Dialog Activity在AndroidManifest.xml配置文件里面是需要配置样式的，详情请查看AndroidManifest.xml文件)
  */
 public class Activity04Dialog01 extends AppCompatActivity {
 
