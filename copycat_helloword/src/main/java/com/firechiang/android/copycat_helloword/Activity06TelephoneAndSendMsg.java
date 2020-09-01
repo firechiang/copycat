@@ -18,8 +18,8 @@ import androidx.core.content.ContextCompat;
 
 /**
  * 线性布局和打电话和发短信以及通过Activity路径跳转简单使用
- * 查找隐式意图跳转Activity的路径，可以启动模拟器再启动某个Activity再查看Logcat的日志找到被启动的Activity的类路径，再去查看Android系统源码找那个类，
- * 再找到那个类在AndroidManifest.xml配置文件里面所配置的action名称，最后根据那个action的名称就可以跳转了
+ * 查找隐式意图跳转Activity的路径，可以启动模拟器再启动某个Activity再查看Logcat的日志找到被启动的Activity的类路径(注意：查看日志是只查看activitymanager的日志，就是在过滤输入框里面输入activitymanager即可)，
+ * 再去查看Android系统源码找那个类，再找到那个类在AndroidManifest.xml配置文件里面所配置的action名称，最后根据那个action的名称就可以跳转了
  *  Intent intent = new Intent(Intent.ACTION_CALL);// Intent.ACTION_CALL 就是Activity的action名称，只不过这个名称被定义成常量了
  */
 public class Activity06TelephoneAndSendMsg extends AppCompatActivity {
