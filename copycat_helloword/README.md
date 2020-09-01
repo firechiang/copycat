@@ -7,7 +7,7 @@
  - singleTask（当前栈单列模式，只有一个实列，默认在当前Task中，这个就是标准的单列）
  - singleInstance(栈独立单例模式，只有一个实列且创建时会创建一个栈且此栈中除了这个Activity不能有其它对象)
 
-#### Activity 相关应用（注意：使用Activity的Class跳转到另一个Activity叫显示意图，主要用于应用内的Activity相互跳转；使用ActivityActivity路径跳转到另一个Activity叫隐式意图，主要用于系统间的Activity跳转）
+#### Activity 应用相关（注意：使用Activity的Class跳转到另一个Activity叫显示意图，主要用于应用内的Activity相互跳转；使用ActivityActivity路径跳转到另一个Activity叫隐式意图，主要用于系统间的Activity跳转）
  - [Avtivity生命周期相关以及4种状态](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity03LifeCycle.java)
  - [使用Activity的Class跳转（显示意图）并监听回调（主要用于应用内的Activity相互跳转）](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity02LinearLayout01.java)
  - [点击按钮弹出Dialog](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity04Dialog01.java)
