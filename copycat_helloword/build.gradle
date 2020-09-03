@@ -22,6 +22,16 @@ android {
         }
     }
 
+    /**
+     * 指定资源文件目录
+     * 注意：如果是自定义布局文件夹，一定要在该文件夹下再建一个layout文件夹，然后把布局文件放到layout文件夹里面，否则布局文件无法加载
+     * 注意：如果是自定义Menu(菜单)文件夹，一定要在该文件夹下再建一个menu文件夹，然后把Menu（菜单）文件放到menu文件夹里面，否则Menu（菜单）文件无法加载
+     */
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res','src/main/res/layout/ui']
+        }
+    }
 }
 
 dependencies {

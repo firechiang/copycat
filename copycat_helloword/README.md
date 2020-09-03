@@ -1,4 +1,4 @@
-#### Activity 相关说明
+#### Activity 相关说明（注意：所有的Activity都需要在AndroidManifest.xml文件配置，否则无法使用（跟Servlet一样都需要配置））
  - Activity Task Stack（Activity任务栈，用于存储Activity调用栈以及Activity信息。这是一个栈结构，先启动的Activity在最下面，最上面的Activity就是显示的那个）
 
 #### Activity启动模式（启动Activity总是创建一个新对象，有时需要复用已有对象，可以在配置Activity时通过LaunchMode属性指定启动模式）

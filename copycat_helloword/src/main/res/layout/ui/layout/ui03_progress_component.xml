@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui_component.Ui03ProgressComponent">
+
+    <!-- horizontal（水平）,android:gravity="center"（子组件居中显示） -->
+    <LinearLayout android:id="@+id/ui03ProgressComponentLinearLayout01" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center">
+        <ProgressBar android:layout_width="50dp" android:layout_height="50dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在加载中..." />
+    </LinearLayout>
+
+    <!-- android:progress="30"（进度条默认位置） -->
+    <ProgressBar
+        android:id="@+id/ui03ProgressComponentProgressBar01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="30"/>
+
+    <SeekBar
+        android:id="@+id/ui03ProgressComponentSeekBar01"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1，滑动下面的滑竿后，上面的进度条会同步\n2,滑到最大值时，最上面的进度条消失"
+        />
+
+</LinearLayout>

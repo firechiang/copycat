@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui_component.Ui01SimpleComponent">
+
+    <!-- match_parent（全部宽度），wrap_content（自适应） -->
+    <TextView
+        android:id="@+id/ui01SimpleComponentTextView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是TextView的内容"
+        android:background="#999999"
+        android:textSize="20sp"
+        android:textColor="#ff0000"
+        />
+
+    <!-- android:inputType=（指定输入框类型） -->
+    <EditText
+        android:id="@+id/ui01SimpleComponentEditText01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        />
+
+    <EditText
+        android:id="@+id/ui01SimpleComponentEditText02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:onClick="btnSubmit"
+        />
+
+    <!-- @android:drawable（指定系统图片） -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/alert_dark_frame"
+        android:src="@android:drawable/ic_media_pause"
+        android:onClick="imageSwitch"
+        />
+
+    <!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <!-- android:checked(是否默认勾选) -->
+        <CheckBox android:id="@+id/ui01SimpleComponentCheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="篮球" android:checked="true" />
+
+        <!-- android:checked(是否默认勾选) -->
+        <CheckBox android:id="@+id/ui01SimpleComponentCheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="足球" android:checked="false" />
+
+        <!-- android:checked(是否默认勾选) -->
+        <CheckBox android:id="@+id/ui01SimpleComponentCheckBox03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="排球" android:checked="false" />
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击显示被勾选的勾选框" android:onClick="btnCheck" />
+    </LinearLayout>
+
+    <!-- 单选框组,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+    <RadioGroup android:id="@+id/ui01SimpleComponentRadioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+        <RadioButton android:id="@+id/ui01SimpleComponentRadioButton01" android:layout_height="wrap_content" android:layout_width="wrap_content" android:checked="true" android:text="男"/>
+        <RadioButton android:id="@+id/ui01SimpleComponentRadioButton02" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="女"/>
+    </RadioGroup>
+
+</LinearLayout>
