@@ -5,8 +5,8 @@ android:layout_alignParentRight                            （与父容器同方
 android:layout_alignLeft="@id/layout01_relative_btn_ok"    （同方向对齐，这种方式需要指定基准组件的ID（就是要和那个组件对齐））
 android:layout_toLeftOf="@id/layout01_relative_btn_ok"     （反方向对齐，这种方式需要指定基准组件的ID（就是要和那个组件对齐））
 android:layout_below="@id/layout01_relative_edit_text_to"  （在某个组件的下面，这种方式需要指定基准组件的ID（就是要在那个组件的下面））
-android:layout_marginRight="20dp"                           (外边距)
-android:paddingRight="20dp"                                （内边距）
+android:layout_marginRight="20dp"                           (外边距，组件与组件之间的距离)
+android:paddingRight="20dp"                                （内边距，组件里面的内容与组件边框的距离）
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
