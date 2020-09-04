@@ -12,3 +12,8 @@
  - [使用Activity的Class跳转（显示意图）并监听回调（主要用于应用内的Activity相互跳转）](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity02LinearLayout01.java)
  - [点击按钮弹出Dialog](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity04Dialog01.java)
  - [线性布局，打电话，发短信以，通过Activity路径跳转（隐式意图，主要用于系统的Activity跳转），授权回调，长按事件](https://github.com/firechiang/copycat/blob/master/copycat_helloword/src/main/java/com/firechiang/android/copycat_helloword/Activity06TelephoneAndSendMsg.java)
+
+#### UI相关说明
+ - 如果需要做一些等待不能在主线程做，否则ui无法渲染
+ - 子线程里面不能直接更新UI，需要借助 Handler 工具才能更新UI（注意：Handler 实际是将更新UI的任务交给了主线程）
+ - 在Activity的子线程里面更新UI可直接使用，runOnUiThread(new Runnable(){})函数（注意：它内部原理还是用 Handler）

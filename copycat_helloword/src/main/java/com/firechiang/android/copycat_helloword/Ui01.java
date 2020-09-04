@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.firechiang.android.copycat_helloword.ui_component.Ui01SimpleComponent;
 import com.firechiang.android.copycat_helloword.ui_component.Ui02MenuComponent;
 import com.firechiang.android.copycat_helloword.ui_component.Ui03ProgressComponent;
+import com.firechiang.android.copycat_helloword.ui_component.Ui04DialogComponent;
 
 /**
  * UI组件
@@ -51,6 +52,6 @@ public class Ui01 extends AppCompatActivity {
      * @param view
      */
     public void dialogComponent(View view) {
-
+        startActivity(new Intent(this, Ui04DialogComponent.class));
     }
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui_component.Ui04DialogComponent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showCommonlyDialog"
+        android:text="显示一般的AlerttDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showRadioListDialog"
+        android:text="显示单选列表AlerttDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showCustomDialog"
+        android:text="显示自定义AlerttDialog"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showGraphicProgressDialog"
+        android:text="显示图形进度条AlerttDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showHorizontalProgressDialog"
+        android:text="显示水平进度条AlerttDialog"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showDateDialog"
+        android:text="显示选择年月日AlerttDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTimeDialog"
+        android:text="显示选择时分秒AlerttDialog"
+        />
+
+</LinearLayout>

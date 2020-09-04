@@ -41,6 +41,7 @@
         <activity android:name=".ui_component.Ui01SimpleComponent" android:label="常用简单的组件页面"/>
         <activity android:name=".ui_component.Ui02MenuComponent" android:label="常用菜单组件页面"/>
         <activity android:name=".ui_component.Ui03ProgressComponent" android:label="常用进度条组件页面"/>
+        <activity android:name=".ui_component.Ui04DialogComponent" android:label="常用对话框组件页面"/>
     </application>
 
 </manifest>

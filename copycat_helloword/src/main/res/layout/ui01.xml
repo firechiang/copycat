@@ -33,7 +33,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转到测试进度条组件页面"
+        android:text="跳转到对话框组件页面"
         android:onClick="dialogComponent"
         />
 
