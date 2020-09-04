@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+RelativeLayout（相对布局）
+android:layout_alignParentRight                            （与父容器同方向对齐）
+android:layout_alignLeft="@id/layout01_relative_btn_ok"    （同方向对齐，这种方式需要指定基准组件的ID（就是要和那个组件对齐））
+android:layout_toLeftOf="@id/layout01_relative_btn_ok"     （反方向对齐，这种方式需要指定基准组件的ID（就是要和那个组件对齐））
+android:layout_below="@id/layout01_relative_edit_text_to"  （在某个组件的下面，这种方式需要指定基准组件的ID（就是要在那个组件的下面））
+android:layout_marginRight="20dp"                           (外边距)
+android:paddingRight="20dp"                                （内边距）
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".layout.Layout01Relative">
+
+    <!-- android:layout_alignParentLeft（是否与父容器左边对齐），android:layout_alignParentRight（是否与父容器右边对齐） -->
+    <!-- 当左右都对齐时，就是自动铺满与 android:scaleType="fitXY" 效果等价 -->
+    <EditText
+        android:id="@+id/layout01_relative_edit_text_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:hint="To"
+        />
+
+    <!-- android:layout_alignParentRight（是否与父容器右边对齐），android:layout_below（在某个组件的下面），android:layout_above（在某个组件的上面） -->
+    <Button
+        android:id="@+id/layout01_relative_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layout01_relative_edit_text_to"
+        />
+
+    <!-- android:layout_toLeftOf="@id/layout01_relative_btn_ok"（反方向对齐，这种方式需要指定基准组件的ID（就是要和那个组件对齐））-->
+    <!-- android:layout_alignTop="@id/layout01_relative_btn_ok"（同方向对齐，与某个组件顶部对齐） -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_toLeftOf="@id/layout01_relative_btn_ok"
+        android:layout_alignTop="@id/layout01_relative_btn_ok"
+        android:layout_marginRight="20dp"
+        />
+
+
+</RelativeLayout>

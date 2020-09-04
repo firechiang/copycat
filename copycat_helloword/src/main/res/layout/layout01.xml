@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Layout01">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到线性布局示列"
+        android:onClick="toLinearLayoutView"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到相对布局示列"
+        android:onClick="toRelativeLayoutView"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到帧布局示列"
+        android:onClick="toFrameLayoutView"
+        />
+
+
+
+</LinearLayout>

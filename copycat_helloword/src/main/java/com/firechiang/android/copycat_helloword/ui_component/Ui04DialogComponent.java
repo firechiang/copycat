@@ -18,7 +18,7 @@ import com.firechiang.android.copycat_helloword.R;
 import java.util.Calendar;
 
 /**
- * 对话框组件（一般消息提示，带单选框的提示，自定义的单选框，日期选择弹出框）
+ * 对话框组件（一般消息提示，带单选框的提示，自定义的单选框，日期选择弹出框，子线程里面更新UI）
  */
 public class Ui04DialogComponent extends Activity {
 

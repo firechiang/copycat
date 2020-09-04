@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平）,android:gravity="center"（内容居中显示），android:layout_gravity="center"（组件居中显示） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".layout.Layout01Linear">
+
+    <EditText
+        android:hint="TO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:hint="Subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- android:layout_weight(宽度或高度的空间占比（只在当前布局内有效），大于0就是空间占比，等于0的话就是指定多大空间就占据多大空间) -->
+    <!-- 权重使用说明：如果宽度指定为0且又指定了权重，那么权重有效范围就是宽度；如果高度指定为0且又指定了权重，那么权重有效范围就是高度；-->
+    <!-- android:gravity="top"（内容顶部显示），android:layout_gravity="center"（组件居中显示） -->
+    <EditText
+        android:gravity="top"
+        android:hint="Message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <!-- horizontal（水平）,android:gravity="center"（内容居中显示），android:layout_gravity="center"（组件居中显示） -->
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center">
+        <!-- android:layout_weight(宽度或高度的空间占比（只在当前布局内有效），大于0就是空间占比，等于0的话就是指定多大空间就占据多大空间) -->
+        <!-- 权重使用说明：如果宽度指定为0且又指定了权重，那么权重有效范围就是宽度；如果高度指定为0且又指定了权重，那么权重有效范围就是高度；-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".ui_component.Ui03ProgressComponent">
 
-    <!-- horizontal（水平）,android:gravity="center"（子组件居中显示） -->
+    <!-- horizontal（水平）,android:gravity="center"（内容居中显示），android:layout_gravity="center"（组件居中显示） -->
     <LinearLayout android:id="@+id/ui03ProgressComponentLinearLayout01" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center">
         <ProgressBar android:layout_width="50dp" android:layout_height="50dp" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在加载中..." />
