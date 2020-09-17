@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- style="@style/ImageTextView"（自定义公共样式属性（它会替换主题样式）），android:drawableLeft="@mipmap/icon01"（指定左边的图片），android:gravity="center_vertical"（垂直居中） -->
+    <TextView
+        android:id="@+id/ui05_listview_c04_imagetext_textview_name"
+        style="@style/ImageTextView"
+        />
+
+</LinearLayout>

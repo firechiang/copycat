@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：这个里面不能写任何标签，因为它的数据要动态添加 -->
+<!-- android:gravity="center_vertical"（垂直居中） -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center_vertical">
+
+</TextView>
