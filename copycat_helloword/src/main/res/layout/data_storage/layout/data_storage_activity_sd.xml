@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".data_storage.DataStorageActivitySd">
+
+    <EditText
+        android:id="@+id/data_storage_activity_sd_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入存储时的文件名（可随意指定）"
+        />
+
+    <EditText
+        android:id="@+id/data_storage_activity_sd_filecontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入存储的文件内容"
+        />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击存储到默认目录"
+            android:layout_weight="1"
+            android:onClick="saveData1"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击读取默认目录数据"
+            android:layout_weight="1"
+            android:onClick="queryData1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -60,4 +60,12 @@
         android:text="显示选择时分秒AlerttDialog"
         />
 
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showEditTextDialog"
+        android:text="显示带文本框的AlerttDialog"
+        />
+
 </LinearLayout>

@@ -237,4 +237,30 @@ public class Ui04DialogComponent extends Activity {
         // 显示组件
         timePickerDialog.show();
     }
+
+    /**
+     * 显示带文本框的AlerttDialog
+     * @param view
+     */
+    public void showEditTextDialog(View view) {
+        final EditText editText = new EditText(this);
+        editText.setHint("请输入测试信息");
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setTitle("删除数据")
+                .setMessage("确定删除吗？")
+                .setView(editText)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(Ui04DialogComponent.this, editText.getText().toString(), Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(Ui04DialogComponent.this, "点击了取消", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+    }
 }

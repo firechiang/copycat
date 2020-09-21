@@ -26,16 +26,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试外部文件存储"
-        android:onClick="toOfStorage"
+        android:text="测试数据库存储"
+        android:onClick="toDbStorage"
         />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="测试数据库存储"
-    android:onClick="toDbStorage"
-    />
 
     <Button
         android:layout_width="match_parent"

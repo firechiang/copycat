@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- 需要发短信的权限 -->
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 读写SD卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -20,7 +22,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".data_storage.DataStorageActivityMain" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".ui_component.Ui04DialogComponent" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -45,7 +47,7 @@
         <activity android:name=".ui_component.Ui01SimpleComponent" android:label="常用简单的组件页面"/>
         <activity android:name=".ui_component.Ui02MenuComponent" android:label="常用菜单组件页面"/>
         <activity android:name=".ui_component.Ui03ProgressComponent" android:label="常用进度条组件页面"/>
-        <activity android:name=".ui_component.Ui04DialogComponent" android:label="常用对话框组件页面"/>
+        <!--<activity android:name=".ui_component.Ui04DialogComponent" android:label="常用对话框组件页面"/>-->
         <activity android:name=".ui_component.Ui05ListViewComponentSimpleTextListView" android:label="简单文本列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentComplexTextListView" android:label="复杂文本带图片的列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentCustomTextListView" android:label="自定义列表页面"/>
@@ -57,6 +59,7 @@
 
         <activity android:name=".data_storage.DataStorageActivitySp" android:label="测试SharedPreference存储"/>
         <activity android:name=".data_storage.DataStorageActivitySd" android:label="测试Sd卡存储"/>
+        <activity android:name=".data_storage.DataStorageActivityIf" android:label="测试手机内部存储"/>
     </application>
 
 </manifest>

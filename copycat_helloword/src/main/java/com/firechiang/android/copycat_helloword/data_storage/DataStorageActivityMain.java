@@ -33,15 +33,7 @@ public class DataStorageActivityMain extends Activity {
      * @param v
      */
     public void toIfStorage(View v) {
-
-    }
-
-    /**
-     * 测试外部文件存储
-     * @param v
-     */
-    public void toOfStorage(View v) {
-
+        startActivity(new Intent(this,DataStorageActivityIf.class));
     }
 
     /**
