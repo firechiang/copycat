@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".data_storage.DataStorageActivitySp">
+
+    <EditText
+        android:id="@+id/data_storage_activity_sp_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入存储 Key"
+        />
+
+    <EditText
+        android:id="@+id/data_storage_activity_sp_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入存储 Value"
+        />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击存储"
+            android:layout_weight="1"
+            android:onClick="saveData"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击读取"
+            android:layout_weight="1"
+            android:onClick="queryData"
+            />
+    </LinearLayout>
+
+</LinearLayout>
