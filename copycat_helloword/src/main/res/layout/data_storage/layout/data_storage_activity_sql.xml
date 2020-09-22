@@ -7,34 +7,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".data_storage.DataStorageActivityMain">
+    tools:context=".data_storage.DataStorageActivitySql">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试SD卡存储"
-        android:onClick="toSdStorage"
+        android:text="创建DB数据库"
+        android:onClick="createDB"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试内部文件存储"
-        android:onClick="toIfStorage"
+        android:text="修改DB数据库"
+        android:onClick="updateDB"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试SQLite数据库存储"
-        android:onClick="toDbStorage"
+        android:text="插入数据"
+        android:onClick="insert"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试SharedPreference存储（就是Key Value存储）"
-        android:onClick="toSpStorage"
+        android:text="修改数据"
+        android:onClick="update"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据"
+        android:onClick="del"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询数据"
+        android:onClick="query"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="事物简单使用"
+        android:onClick="transaction"
+        />
+
 
 </LinearLayout>

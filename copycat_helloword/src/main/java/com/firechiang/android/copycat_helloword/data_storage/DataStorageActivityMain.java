@@ -41,7 +41,7 @@ public class DataStorageActivityMain extends Activity {
      * @param v
      */
     public void toDbStorage(View v) {
-
+        startActivity(new Intent(this,DataStorageActivitySql.class));
     }
 
     /**

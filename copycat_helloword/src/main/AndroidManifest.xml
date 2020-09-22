@@ -22,7 +22,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".ui_component.Ui04DialogComponent" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".data_storage.DataStorageActivityMain" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -60,6 +60,7 @@
         <activity android:name=".data_storage.DataStorageActivitySp" android:label="测试SharedPreference存储"/>
         <activity android:name=".data_storage.DataStorageActivitySd" android:label="测试Sd卡存储"/>
         <activity android:name=".data_storage.DataStorageActivityIf" android:label="测试手机内部存储"/>
+        <activity android:name=".data_storage.DataStorageActivitySql" android:label="测试SQLite数据库存储"/>
     </application>
 
 </manifest>
