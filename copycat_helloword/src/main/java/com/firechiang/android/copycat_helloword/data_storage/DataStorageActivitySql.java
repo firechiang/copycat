@@ -25,9 +25,9 @@ public class DataStorageActivitySql extends Activity  {
      * @param context 上下文
      * @param name    存储数据的文件名称
      * @param factory 游标工程
-     * @param version 版本号（可以顺便写，如果版本号和以前的不一样就会重新创建一个数据库存储文件）
+     * @param version 版本号（可以顺便写，如果版本号和以前的不一样就会更新数据版本，注意一点，数据版本不能降级否则报错）
      */
-    SqlUtil sqlUtil = new SqlUtil(this,"copycat_helloword.db",null,2);
+    SqlUtil sqlUtil = new SqlUtil(this,"copycat_helloword.db",null,3);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +54,14 @@ public class DataStorageActivitySql extends Activity  {
      * @param view
      */
     public void updateDB(View view) {
+        /**
+         * 数据库操作工具
+         * @param context 上下文
+         * @param name    存储数据的文件名称
+         * @param factory 游标工程
+         * @param version 版本号（可以顺便写，如果版本号和以前的不一样就会更新数据版本，注意一点，数据版本不能降级否则报错）
+         */
+        SqlUtil sqlUtil = new SqlUtil(this,"copycat_helloword.db",null,3);
         /**
          * 获取数据库连接并创建数据库存储文件（注意：如果数据存储文件已存在就不会创建该数据库存储文件）
          * 注意：sqlUtil.getWritableDatabase() 和 sqlUtil.getReadableDatabase() 获取连接在正常情况下是没什么区别的，
