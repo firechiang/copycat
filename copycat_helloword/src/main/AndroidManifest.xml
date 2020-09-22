@@ -22,7 +22,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".data_storage.DataStorageActivityMain" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".ui_component.Ui05ListViewComponent" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -52,6 +52,7 @@
         <activity android:name=".ui_component.Ui05ListViewComponentComplexTextListView" android:label="复杂文本带图片的列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentCustomTextListView" android:label="自定义列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentImageTextListView" android:label="自定义列表页面（TextView左边直接加图片和自定义公共样式属性）"/>
+        <activity android:name=".ui_component.Ui06ListViewComponentListViewListView" android:label="列表没有数据自动显示一个TextView"/>
 
         <activity android:name=".layout.Layout01Linear" android:label="线性布局示列"/>
         <activity android:name=".layout.Layout01Relative" android:label="相对布局示列"/>

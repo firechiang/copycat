@@ -54,5 +54,13 @@ public class Ui05ListViewComponent extends Activity {
         startActivity(new Intent(this,Ui05ListViewComponentImageTextListView.class));
     }
 
+    /**
+     * ListView（列表）里面没有数据就自动显示一个TextView
+     * @param view
+     */
+    public void showEmptyTextListView(View view) {
+        startActivity(new Intent(this,Ui06ListViewComponentListViewListView.class));
+    }
+
 
 }

@@ -37,5 +37,12 @@
         android:onClick="showCustomXTextListView"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView（列表）里面没有数据就自动显示一个TextView"
+        android:onClick="showEmptyTextListView"
+        />
+
 
 </LinearLayout>
