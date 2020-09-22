@@ -15,7 +15,7 @@ import com.firechiang.android.copycat_helloword.R;
 /**
  * 测试SharedPreference存储
  * SharedPreference存储专门用来存储一些单一的小数据，它是以 Key Value的方式进行存储，可存储的数据类型有 boolean，float，int，long，string
- * 数据保存在 /data/data/packageName/shared_prefs/yyy.xml 文件里面（注意：packageName就是app的名称，yyy是创建文件时所指定的名称），改文件可设置为只当前应用可读，其它应用不可读，应用删除时也会删除此文件
+ * 数据保存在 /data/data/packageName/shared_prefs/yyy.xml 文件里面（注意：packageName就是app的名称，yyy是创建文件时所指定的名称），该文件可设置为只当前应用可读，其它应用不可读，应用删除时也会删除此文件
  *
  */
 public class DataStorageActivitySp extends Activity {

@@ -20,7 +20,7 @@ import java.io.InputStream;
 
 /**
  * 测试手机内部存储
- * 数据保存在 /data/data/packageName/files 文件里面（注意：packageName就是app的名称），改文件可设置为只当前应用可读，其它应用不可读，应用删除时也会删除此文件
+ * 数据保存在 /data/data/packageName/files 文件里面（注意：packageName就是app的名称），该文件可设置为只当前应用可读，其它应用不可读，应用删除时也会删除此文件
  */
 public class DataStorageActivityIf extends Activity {
 
