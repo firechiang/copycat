@@ -52,7 +52,7 @@
         <activity android:name=".ui_component.Ui05ListViewComponentComplexTextListView" android:label="复杂文本带图片的列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentCustomTextListView" android:label="自定义列表页面"/>
         <activity android:name=".ui_component.Ui05ListViewComponentImageTextListView" android:label="自定义列表页面（TextView左边直接加图片和自定义公共样式属性）"/>
-        <activity android:name=".ui_component.Ui06ListViewComponentListViewListView" android:label="列表没有数据自动显示一个TextView"/>
+        <activity android:name=".ui_component.Ui05ListViewComponentListViewListView" android:label="列表没有数据自动显示一个TextView"/>
 
         <activity android:name=".layout.Layout01Linear" android:label="线性布局示列"/>
         <activity android:name=".layout.Layout01Relative" android:label="相对布局示列"/>

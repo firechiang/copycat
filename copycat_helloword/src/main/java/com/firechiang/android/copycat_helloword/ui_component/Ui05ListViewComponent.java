@@ -59,7 +59,7 @@ public class Ui05ListViewComponent extends Activity {
      * @param view
      */
     public void showEmptyTextListView(View view) {
-        startActivity(new Intent(this,Ui06ListViewComponentListViewListView.class));
+        startActivity(new Intent(this, Ui05ListViewComponentListViewListView.class));
     }
 
 

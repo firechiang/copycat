@@ -20,7 +20,7 @@ import java.util.List;
  * 当LIstView里面没有数据时，自动显示一个 TextView
  * 注意：ListActivity 里面必须有一个ListView和一个TextView而且ID必须使用系统定义的ID
  */
-public class Ui06ListViewComponentListViewListView extends ListActivity {
+public class Ui05ListViewComponentListViewListView extends ListActivity {
 
     AppAdapter adapter = new AppAdapter();
 
@@ -72,7 +72,7 @@ public class Ui06ListViewComponentListViewListView extends ListActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if(convertView == null) {
-                convertView = new TextView(Ui06ListViewComponentListViewListView.this);
+                convertView = new TextView(Ui05ListViewComponentListViewListView.this);
             }
             TextView textView = (TextView)convertView;
             textView.setText(data.get(position));
@@ -99,9 +99,9 @@ public class Ui06ListViewComponentListViewListView extends ListActivity {
         @Override
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
             // 删除当前选项的数据
-            Ui06ListViewComponentListViewListView.this.adapter.getData().remove(position);
+            Ui05ListViewComponentListViewListView.this.adapter.getData().remove(position);
             // 更新列表（刷新列表）（注意：这个函数使用的是缓存数据，不会去重新加载数据，故推荐生产使用）
-            Ui06ListViewComponentListViewListView.this.adapter.notifyDataSetChanged();
+            Ui05ListViewComponentListViewListView.this.adapter.notifyDataSetChanged();
             return true;
         }
     }
