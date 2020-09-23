@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".network.NetWorkMainActivity">
+
+    <EditText
+        android:id="@+id/network_main_activity_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入请求地址"
+        />
+
+    <LinearLayout android:layout_marginTop="10dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <!-- android:textAllCaps="false"（不将android:text的值转换为大写字母） -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用HttpUrlConnection发送GET请求"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:onClick="httpUrlConnectionGet"
+            />
+        <!-- android:textAllCaps="false"（不将android:text的值转换为大写字母） -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用HttpUrlConnection发送POST请求"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:onClick="httpUrlConnectionPost"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_marginTop="10dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <!-- android:textAllCaps="false"（不将android:text的值转换为大写字母） -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用Volley发送GET请求"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:onClick="volleyGet"
+            />
+        <!-- android:textAllCaps="false"（不将android:text的值转换为大写字母） -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用Volley发送POST请求"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:onClick="volleyPost"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/network_main_activity_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+</LinearLayout>

@@ -29,7 +29,12 @@ android {
      */
     sourceSets {
         main {
-            res.srcDirs = ['src/main/res','src/main/res/layout/ui','src/main/res/layout/layout0','src/main/res/layout/ui_example','src/main/res/layout/data_storage']
+            res.srcDirs = ['src/main/res',
+                           'src/main/res/layout/ui',
+                           'src/main/res/layout/layout0',
+                           'src/main/res/layout/ui_example',
+                           'src/main/res/layout/data_storage',
+                           'src/main/res/layout/network']
         }
     }
 }
@@ -44,4 +49,6 @@ dependencies {
     testImplementation rootProject.dependenciesLib.junit
     androidTestImplementation rootProject.dependenciesLib.androidTestJunit
     androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore
+    // 添加第三方依赖
+    implementation group: 'com.android.volley', name: 'volley', version: '1.1.1'
 }
