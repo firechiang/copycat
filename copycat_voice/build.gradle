@@ -33,5 +33,5 @@ dependencies {
     androidTestImplementation rootProject.dependenciesLib.androidTestJunit
     androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore
 
-    compile rootProject.dependenciesLib.magicIndicator
+    implementation rootProject.dependenciesLib.magicIndicator
 }

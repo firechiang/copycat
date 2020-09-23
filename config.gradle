@@ -13,7 +13,7 @@ ext {
     ]
 
     dependenciesVersion = [
-            buildGradle:         "3.6.3",
+            buildGradle: '4.0.1',
             appcompat:           "1.1.0",
             junit:               "4.12",
             androidTestJunit:    "1.1.1",
