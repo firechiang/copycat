@@ -34,7 +34,8 @@ android {
                            'src/main/res/layout/layout0',
                            'src/main/res/layout/ui_example',
                            'src/main/res/layout/data_storage',
-                           'src/main/res/layout/network']
+                           'src/main/res/layout/network',
+                           'src/main/res/layout/thread_message']
         }
     }
 }
