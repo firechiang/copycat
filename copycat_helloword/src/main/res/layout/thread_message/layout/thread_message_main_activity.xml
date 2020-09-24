@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".thread_message.MessageMainActivity">
+    tools:context=".thread_message.ThreadMessageMainActivity">
 
     <Button
         android:layout_width="match_parent"

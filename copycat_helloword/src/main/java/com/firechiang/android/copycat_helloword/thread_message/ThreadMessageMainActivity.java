@@ -11,7 +11,7 @@ import com.firechiang.android.copycat_helloword.R;
 /**
  * 消息机制（线程通信）相关主Activity
  */
-public class MessageMainActivity extends Activity {
+public class ThreadMessageMainActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
