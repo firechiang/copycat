@@ -2,6 +2,7 @@ package com.firechiang.android.copycat_helloword.thread_message;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 
@@ -16,5 +17,14 @@ public class MessageMainActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.thread_message_main_activity);
+    }
+
+
+    /**
+     * 线程间消息处理Handler简单使用
+     * @param view
+     */
+    public void testHandler(View view) {
+
     }
 }

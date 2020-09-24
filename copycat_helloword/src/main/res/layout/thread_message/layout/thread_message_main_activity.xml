@@ -12,7 +12,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="asas"
+        android:text="线程间消息处理Handler简单使用"
+        android:onClick="testHandler"
         />
 
 </LinearLayout>
