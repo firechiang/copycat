@@ -12,6 +12,8 @@
     <!-- 访问网络的权限（注意：INTERNET 和 ACCESS_NETWORK_STATE都是） -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 安装未知来源的APK权限（自动安装APK需要） -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
@@ -22,14 +24,14 @@
         android:theme="@style/AppTheme">
 
 
+        <!-- 配置临时共享权限（android:authorities=这个共享权限的唯一标识，要使用这个权限就要用这个标识） -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.firechiang.android.copycat_helloword.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+            <!-- 要共享的数据（注意：这个是要共享某些目录，而这些目录配置在 provider_paths.xml 文件里面） -->
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
         </provider>
 
 

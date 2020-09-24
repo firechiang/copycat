@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：这里配置的是临时可共享的目录（就是其它APP在某个时间段可以使用该目录） -->
+<!-- 注意：name 好像可以顺便写，path 代表子目录（如果是 . 就代表当前目录） -->
 <!-- <root-path>	代表设备的根目录 new File("/") -->
 <!-- <files-path>	代表 context.getFileDir() -->
 <!-- <cache-path>	代表 context.getCacheDir() -->
@@ -6,10 +8,10 @@
 <!-- <external-files-path>	代表 context.getExternalFilesDirs() -->
 <!-- <external-cache-path>	代表 getExternalCacheDirs() -->
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <root-path name="." path="" />
-    <files-path name="." path="." />
-    <cache-path name="." path="." />
-    <external-path name="." path="." />
-    <external-files-path name="." path="." />
-    <external-cache-path name="." path="." />
+    <root-path name="root_files" path="." />
+    <files-path name="files_files" path="." />
+    <cache-path name="cache_files" path="." />
+    <external-path name="external_files" path="." />
+    <external-files-path name="external-files_files" path="." />
+    <external-cache-path name="external-cache_files" path="." />
 </paths>
