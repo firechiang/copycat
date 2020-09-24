@@ -1,6 +1,7 @@
 package com.firechiang.android.copycat_helloword.thread_message;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,10 +22,10 @@ public class ThreadMessageMainActivity extends Activity {
 
 
     /**
-     * 线程间消息处理Handler简单使用
+     * 使用Handler消息机制和不使用Handler简单对比
      * @param view
      */
-    public void testHandler(View view) {
-
+    public void useNotHandlerX(View view) {
+        startActivity(new Intent(this,ThreadMessageMainActivity01.class));
     }
 }

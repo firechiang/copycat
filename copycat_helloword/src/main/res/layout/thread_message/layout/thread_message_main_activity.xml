@@ -12,8 +12,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="线程间消息处理Handler简单使用"
-        android:onClick="testHandler"
+        android:text="使用Handler消息机制和不使用Handler简单对比"
+        android:textAllCaps="false"
+        android:onClick="useNotHandlerX"
         />
 
 </LinearLayout>
