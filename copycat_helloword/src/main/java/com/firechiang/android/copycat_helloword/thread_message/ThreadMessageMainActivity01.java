@@ -14,18 +14,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.firechiang.android.copycat_helloword.R;
-import com.firechiang.android.copycat_helloword.network.NetWorkMainActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 /**
- * 不使用Handler实现异步工作
+ * 使用Handler消息机制和不使用handler简单比较
  */
 public class ThreadMessageMainActivity01 extends Activity {
     /**

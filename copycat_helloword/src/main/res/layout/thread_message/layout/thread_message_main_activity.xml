@@ -17,4 +17,20 @@
         android:onClick="useNotHandlerX"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用Handler消息机制实现对数值的手动和自动增加（注意：这里包含消息移除和禁用Button）"
+        android:textAllCaps="false"
+        android:onClick="addAndReduction"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask 异步任务简单使用（以后刷新UI视图可以使用这个来做，因为它其实就是一个线程池）"
+        android:textAllCaps="false"
+        android:onClick="asyncTask"
+        />
+
 </LinearLayout>

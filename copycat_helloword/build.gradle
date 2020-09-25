@@ -42,6 +42,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 直接引入测试jar包
+    //testCompile files('libs/json.jar')
 
     implementation rootProject.dependenciesLib.appcompat
     implementation rootProject.dependenciesLib.constraintlayout
@@ -52,4 +54,6 @@ dependencies {
     androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore
     // 添加第三方依赖
     implementation group: 'com.android.volley', name: 'volley', version: '1.1.1'
+    // 添加测试依赖（这个是Android自带的json，因为测试依赖里面没有所以才加的，以方便测试使用）
+    testImplementation group: 'org.json', name: 'json', version: '20200518'
 }

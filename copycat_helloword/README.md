@@ -17,3 +17,6 @@
  - 如果需要做一些等待不能在主线程做，否则ui无法渲染
  - 子线程里面不能直接更新UI，需要借助 Handler 工具才能更新UI（注意：Handler 实际是将更新UI的任务交给了主线程）
  - 在Activity的子线程里面更新UI可直接使用，runOnUiThread(new Runnable(){})函数（注意：它内部原理还是用 Handler）
+
+#### Handler Message 简要说明（注意：Handler是Message（消息）处理器，也是消息发送者）
+ - Message消息体里面包含target（消息发送者Handler），when（消息排序序号），what（消息标识），obj（消息参数），callback（回调函数），next（下一个消息）所以Message本身也是一个链表

@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * 消息机制（线程通信）相关主Activity
+ * 消息机制（线程通信）以及AsyncTask（异步任务）相关主Activity
  */
 public class ThreadMessageMainActivity extends Activity {
 
@@ -27,5 +27,21 @@ public class ThreadMessageMainActivity extends Activity {
      */
     public void useNotHandlerX(View view) {
         startActivity(new Intent(this,ThreadMessageMainActivity01.class));
+    }
+
+    /**
+     * 使用Handler消息机制实现对数值的手动和自动增加
+     * @param view
+     */
+    public void addAndReduction(View view) {
+        startActivity(new Intent(this,ThreadMessageMainActivity02.class));
+    }
+
+    /**
+     * AsyncTask 异步任务简单使用（以后刷新UI视图可以使用这个来做，因为它其实就是一个线程池）
+     * @param view
+     */
+    public void asyncTask(View view) {
+        startActivity(new Intent(this,ThreadMessageMainActivity03.class));
     }
 }

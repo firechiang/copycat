@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".thread_message.ThreadMessageMainActivity03">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取百度首页的数据"
+        android:onClick="baiduData"
+        />
+
+    <TextView
+        android:id="@+id/thread_message_main_activity_03_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：自定义的资源目录需要在 build.gradle 文件里面配置，否则读取不到-->
+<!-- 线性布局,android:orientation="vertical"(垂直)，默认是 horizontal（水平） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".thread_message.ThreadMessageMainActivity02">
+
+    <TextView
+        android:id="@+id/thread_message_main_activity_02_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/thread_message_main_activity_02_button01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手动增加"
+            android:onClick="manualAdd"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/thread_message_main_activity_02_button02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手动减少"
+            android:onClick="manualReduction"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自动增加"
+            android:onClick="autoAdd"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自动减少"
+            android:onClick="autoReduction"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止自动增加或减少"
+        android:onClick="stop"
+        />
+
+
+
+</LinearLayout>
