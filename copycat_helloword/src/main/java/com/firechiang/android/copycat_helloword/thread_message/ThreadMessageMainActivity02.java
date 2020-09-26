@@ -55,6 +55,8 @@ public class ThreadMessageMainActivity02 extends Activity {
                 textView.setText((++value).toString());
                 // 移除自动减少的延迟消息
                 this.removeMessages(WHAT_AUTO_REDUCTION);
+                // 删除所有未处理的消息
+                //handler.removeCallbacksAndMessages(null);
                 // 再发送一个延迟执行的消息以达到自动增加的效果
                 this.sendEmptyMessageDelayed(WHAT_AUTO_ADD,1000);
             }
@@ -63,6 +65,8 @@ public class ThreadMessageMainActivity02 extends Activity {
                 textView.setText((--value).toString());
                 // 移除自动增加的延迟消息
                 this.removeMessages(WHAT_AUTO_ADD);
+                // 删除所有未处理的消息
+                //handler.removeCallbacksAndMessages(null);
                 // 再发送一个延迟执行的消息以达到自动减少的效果
                 this.sendEmptyMessageDelayed(WHAT_AUTO_REDUCTION,1000);
             }
@@ -126,6 +130,8 @@ public class ThreadMessageMainActivity02 extends Activity {
     public void stop(View view) {
         // 删除自动增加的消息
         handler.removeMessages(WHAT_AUTO_ADD);
+        // 删除所有未处理的消息
+        //handler.removeCallbacksAndMessages(null);
         // 删除自动减少的消息
         handler.removeMessages(WHAT_AUTO_REDUCTION);
         button01.setEnabled(true);
