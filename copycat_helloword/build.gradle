@@ -36,7 +36,8 @@ android {
                            'src/main/res/layout/data_storage',
                            'src/main/res/layout/network',
                            'src/main/res/layout/thread_message',
-                           'src/main/res/layout/event']
+                           'src/main/res/layout/event',
+                           'src/main/res/layout/service']
         }
     }
 }
@@ -48,8 +49,6 @@ dependencies {
 
     implementation rootProject.dependenciesLib.appcompat
     implementation rootProject.dependenciesLib.constraintlayout
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.1'
     testImplementation rootProject.dependenciesLib.junit
     androidTestImplementation rootProject.dependenciesLib.androidTestJunit
     androidTestImplementation rootProject.dependenciesLib.androidTestEspressoCore

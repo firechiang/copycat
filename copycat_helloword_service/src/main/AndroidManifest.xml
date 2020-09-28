@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.firechiang.android.copycat_helloword_service">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- name（主界面Activity，点代表package（包名），也可以写全路径包名） -->
+        <!-- label（主界面名称）-->
+        <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
+        <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
+        <activity android:name=".MainActivity">
+            <!-- 意图过滤器 -->
+            <intent-filter>
+                <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- android.intent.category.LAUNCHER（应用分类，让应用图标显示在主界面分类里面） -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地Service（服务）供其他App使用 -->
+        <service android:name=".TestService" android:label="这个服务暴露某些函数给其它APP使用">
+            <intent-filter>
+                <!-- 这个名称给其它APP用来调用当前服务的某些函数 -->
+                <action android:name="com.firechiang.android.copycat_helloword_servicei.TestService" />
+                <!-- 默认分组 -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
