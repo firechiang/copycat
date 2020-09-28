@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event.EventMotionDragImageActivity">
+
+    <!-- 使用自定义的ImageView以达到事件监听的效果 -->
+    <ImageView
+        android:id="@+id/event_motion_drag_image_activity_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/app03"
+        />
+
+</RelativeLayout>
