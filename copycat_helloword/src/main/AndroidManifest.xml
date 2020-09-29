@@ -16,6 +16,8 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- 电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 读取来电状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <!-- android:requestLegacyExternalStorage="true"（可读取存储目录里面的文件） -->
     <application
@@ -44,7 +46,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".service.ServicePhoneActivity" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".service.ServiceInterceptPhoneActivity" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -90,6 +92,7 @@
         <activity android:name=".thread_message.ThreadMessageMainActivity03" android:label="AsyncTask 异步任务简单使用（以后刷新UI视图可以使用这个来做，因为它其实就是一个线程池）"/>
 
         <service android:name=".service.ServiceLocalMainActivity$LocalService" android:label="测试本地服务"></service>
+        <service android:name=".service.ServiceInterceptPhoneActivity$InterceptPhoneService" android:label="拦截黑名单的电话服务"></service>
         <service android:name=".media.MediaAudioActivity$AudioService" android:label="播放音乐的 Service（服务）"></service>
     </application>
 

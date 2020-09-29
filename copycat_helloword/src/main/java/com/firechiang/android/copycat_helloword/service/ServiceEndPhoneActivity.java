@@ -15,14 +15,14 @@ import com.firechiang.android.copycat_helloword.R;
 import java.lang.reflect.Method;
 
 /**
- * 调用系统电话相关Service（服务）的APi
+ * 调用系统电话相关Service（服务）的APi挂断电话
  */
-public class ServicePhoneActivity extends Activity {
+public class ServiceEndPhoneActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.service_phone_activity);
+        setContentView(R.layout.service_end_phone_activity);
     }
 
     /**
@@ -31,6 +31,7 @@ public class ServicePhoneActivity extends Activity {
      * @see https://blog.csdn.net/u011146511/article/details/80059995
      * @param view
      */
+    @Deprecated
     public void hangUp(View view) {
         try {
             Method method = Class.forName("android.os.ServiceManager").getMethod("getService", String.class);

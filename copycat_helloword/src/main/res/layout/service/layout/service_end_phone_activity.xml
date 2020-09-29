@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".service.ServicePhoneActivity">
+    tools:context=".service.ServiceEndPhoneActivity">
 
     <Button
         android:layout_width="match_parent"
