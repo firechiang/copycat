@@ -1,3 +1,6 @@
+#### [Android官方文档](https://developer.android.google.cn/guide/components/aidl)
+#### [Android源码地址（官方地址需要翻墙）](https://android.googlesource.com/platform/frameworks/base/)
+#### [Android源码地址（GitHub地址）](https://github.com/aosp-mirror/platform_frameworks_base)
 #### Activity 相关说明（注意：所有的Activity都需要在AndroidManifest.xml文件中配置，否则无法使用（跟Servlet一样都需要配置））
  - Activity Task Stack（Activity任务栈，用于存储Activity调用栈以及Activity信息。这是一个栈结构，先启动的Activity在最下面，最上面的Activity就是显示的那个）
 
@@ -21,7 +24,7 @@
 #### Handler Message 简要说明（注意：Handler是Message（消息）处理器，也是消息发送者）
  - Message消息体里面包含target（消息发送者Handler），when（消息排序序号），what（消息标识），obj（消息参数），callback（回调函数），next（下一个消息）所以Message本身也是一个链表
 
-#### Service相关说明，Service（服务）的应用场景主要是暴露API给其它App调用（注意：所有的Service都需要在AndroidManifest.xml文件中配置，否则无法使用（跟Servlet一样都需要配置））
+#### Service相关说明，Service（服务）的应用场景主要是后台服务和暴露API给其它App调用（注意：所有的Service都需要在AndroidManifest.xml文件中配置，否则无法使用（跟Servlet一样都需要配置））
  - 已绑定的Service（服务）在Activity销毁时一定要解绑否则抛异常
  - 解绑Service（服务）时会自动销毁Service（服务）
  - 已启动的Service（服务）不会重复启动

@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * 本地Service(服务）相关（注意：Service（服务）的应用场景主要是暴露API给其它App调用）
+ * 本地Service(服务）相关（注意：Service（服务）的应用场景主要是后台服务和暴露API给其它App调用）
  * 注意：所有的Service都需要在AndroidManifest.xml文件中配置，否则无法使用（跟Servlet一样都需要配置）
  */
 public class ServiceLocalMainActivity extends Activity {
