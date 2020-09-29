@@ -59,32 +59,7 @@ public class ServiceInterceptPhoneActivity extends Activity {
         /**
          * 监听来电状态
          */
-        private PhoneStateListener phoneStateListener = new PhoneStateListener() {
-            /**
-             * 监听来电状态
-             * @param state       来电状态（TelephonyManager.CALL_STATE_IDLE=，TelephonyManager.CALL_STATE_OFFHOOK,TelephonyManager.CALL_STATE_RINGING）
-             * @param phoneNumber 来电号码
-             */
-            @Override
-            public void onCallStateChanged(int state, String phoneNumber) {
-                // 空闲（挂断或未来电之前都会调用一次）
-                if(TelephonyManager.CALL_STATE_IDLE == state) {
-
-                }
-                // 响铃
-                if(TelephonyManager.CALL_STATE_RINGING == state) {
-                    // 如果是黑名单的电话
-                    if("13113609230".equals(phoneNumber)) {
-                        // 这里写自动挂断电话逻辑
-                    }
-                }
-                // 接通
-                if(TelephonyManager.CALL_STATE_OFFHOOK == state) {
-
-                }
-                super.onCallStateChanged(state, phoneNumber);
-            }
-        };
+        private PhoneStateListener phoneStateListener;
 
         /**
          * 服务创建回调
@@ -93,12 +68,6 @@ public class ServiceInterceptPhoneActivity extends Activity {
         public void onCreate() {
             // 获取电话服务API管理者
             telephonyManager = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
-            /**
-             * 监听器来电状态
-             * @param listener 监听器
-             * @param events   需要监听来电的那些状态（PhoneStateListener.LISTEN_CALL_STATE=监听所有来电状态）
-             */
-            telephonyManager.listen(phoneStateListener,PhoneStateListener.LISTEN_CALL_STATE);
             Log.i("TAG","拦截黑名单的电话服务 "+InterceptPhoneService.class.getName()+" 已启动");
             super.onCreate();
         }
@@ -123,7 +92,15 @@ public class ServiceInterceptPhoneActivity extends Activity {
          */
         @Override
         public int onStartCommand(Intent intent, int flags, int startId) {
-
+            if(phoneStateListener == null) {
+                phoneStateListener = new InterceptPhoneStateListener();
+                /**
+                 * 监听器来电状态
+                 * @param listener 监听器
+                 * @param events   需要监听来电的那些状态（PhoneStateListener.LISTEN_CALL_STATE=监听所有来电状态）
+                 */
+                telephonyManager.listen(phoneStateListener,PhoneStateListener.LISTEN_CALL_STATE);
+            }
             return super.onStartCommand(intent, flags, startId);
         }
 
@@ -132,13 +109,48 @@ public class ServiceInterceptPhoneActivity extends Activity {
          */
         @Override
         public void onDestroy() {
-            /**
-             * 监听器来电状态
-             * @param listener 监听器
-             * @param events   需要监听那些状态（PhoneStateListener.LISTEN_NONE=不监听了（就是停止监听））
-             */
-            telephonyManager.listen(phoneStateListener,PhoneStateListener.LISTEN_NONE);
+            if(phoneStateListener != null) {
+                /**
+                 * 监听器来电状态
+                 * @param listener 监听器
+                 * @param events   需要监听那些状态（PhoneStateListener.LISTEN_NONE=不监听了（就是停止监听））
+                 */
+                telephonyManager.listen(phoneStateListener,PhoneStateListener.LISTEN_NONE);
+                phoneStateListener = null;
+            }
             super.onDestroy();
+        }
+    }
+
+
+
+    /**
+     * 监听来电状态
+     */
+    public static class InterceptPhoneStateListener extends PhoneStateListener {
+        /**
+         * 监听来电状态
+         * @param state       来电状态（TelephonyManager.CALL_STATE_IDLE=，TelephonyManager.CALL_STATE_OFFHOOK,TelephonyManager.CALL_STATE_RINGING）
+         * @param phoneNumber 来电号码
+         */
+        @Override
+        public void onCallStateChanged(int state, String phoneNumber) {
+            // 空闲（挂断或未来电之前都会调用一次）
+            if(TelephonyManager.CALL_STATE_IDLE == state) {
+
+            }
+            // 响铃
+            if(TelephonyManager.CALL_STATE_RINGING == state) {
+                // 如果是黑名单的电话
+                if("13113609230".equals(phoneNumber)) {
+                    // 这里写自动挂断电话逻辑
+                }
+            }
+            // 接通
+            if(TelephonyManager.CALL_STATE_OFFHOOK == state) {
+
+            }
+            super.onCallStateChanged(state, phoneNumber);
         }
     }
 
