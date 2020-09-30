@@ -39,7 +39,8 @@ android {
                            'src/main/res/layout/event',
                            'src/main/res/layout/service',
                            'src/main/res/layout/media',
-                           'src/main/res/layout/system_broadcast']
+                           'src/main/res/layout/system_broadcast',
+                            'src/main/res/layout/content_provider']
         }
     }
 }

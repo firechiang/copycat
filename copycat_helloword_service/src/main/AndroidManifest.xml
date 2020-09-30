@@ -33,6 +33,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+
+        <!-- 内容提供者 android:authorities=（就是别的App要操作我们的数据库的唯一标识），android:exported=（是否允许别的App操作我们的数据库）-->
+        <provider
+            android:name=".MainActivity$UserContentProvider"
+            android:authorities="com.firechiang.android.copycat_helloword_service.MainActivity$UserContentProvider"
+            android:exported="true"/>
     </application>
 
 </manifest>
