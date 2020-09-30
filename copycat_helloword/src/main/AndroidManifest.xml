@@ -16,8 +16,12 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- 电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 接收短信广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <!-- 读取来电状态权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 接收开机广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <!-- android:requestLegacyExternalStorage="true"（可读取存储目录里面的文件） -->
     <application
@@ -46,7 +50,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".system_broadcast.SystemBroadcast02" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".system_broadcast.SystemBroadcast03" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -99,7 +103,37 @@
         <receiver android:name=".system_broadcast.SystemBroadcast01$SimpleBroadcastReceiver1" android:label="自定义的广播接收器1">
             <!-- android:priority(指定当前广播接收器的优先级，值一般是 0-1000。越大越好) -->
             <intent-filter android:priority="500">
+                 <!-- 发送广播时，写这个 Action Name 这个接收器就可以接收到这条广播 -->
                  <action android:name="com.firechiang.android.copycat_helloword.system_broadcast.SystemBroadcast01$SimpleBroadcastReceiver1.action"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收开机事件的广播接收器 -->
+        <receiver android:name=".system_broadcast.SystemBroadcast03$SimpleBroadcastReceiver3" android:label="接收开机事件的广播接收器（就是接收开机事件）">
+            <!-- android:priority(指定当前广播接收器的优先级，值一般是 0-1000。越大越好) -->
+            <intent-filter android:priority="500">
+                <!-- Intent.ACTION_BOOT_COMPLETED = "android.intent.action.BOOT_COMPLETED" （接收开机广播事件，注意：这个需要权限而且这个字符串是系统定义的在 Intent.class 里面的）-->
+                <!-- 注意： 还可以监听锁屏关机等事件具体请查看 Intent.class 里面的定义-->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收开机事件的广播接收器 -->
+        <receiver android:name=".service.ServiceInterceptPhoneActivity$SystemBootBroadcastReceiver" android:label="接收开机事件后启动拦截黑名单电话服务">
+            <!-- android:priority(指定当前广播接收器的优先级，值一般是 0-1000。越大越好) -->
+            <intent-filter android:priority="500">
+                <!-- Intent.ACTION_BOOT_COMPLETED = "android.intent.action.BOOT_COMPLETED" （接收开机广播事件，注意：这个需要权限而且这个字符串是系统定义的在 Intent.class 里面的）-->
+                <!-- 注意： 还可以监听锁屏关机等事件具体请查看 Intent.class 里面的定义-->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收短信事件的广播接收器 -->
+        <receiver android:name=".service.ServiceInterceptMessageActivity$MessageBroadcastReceiver" android:label="接收到短信事件拦截黑名单短信">
+            <!-- android:priority(指定当前广播接收器的优先级，值一般是 0-1000。越大越好) -->
+            <intent-filter android:priority="500">
+                <!-- 注意： 这个接收短信广播事件的 Action 字符串在 Android8.0 以后已经不能用了被限制了，如果还是要接收短信广播事件需要重新研究-->
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
     </application>

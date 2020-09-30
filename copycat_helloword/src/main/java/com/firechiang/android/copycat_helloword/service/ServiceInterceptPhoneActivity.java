@@ -2,6 +2,7 @@ package com.firechiang.android.copycat_helloword.service;
 
 import android.app.Activity;
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import androidx.annotation.Nullable;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * 拦截黑名单电话并自动断
+ * 开机自动启动拦截黑名单电话服务和手动启动拦截服务并自动挂断
  */
 public class ServiceInterceptPhoneActivity extends Activity {
 
@@ -143,7 +144,7 @@ public class ServiceInterceptPhoneActivity extends Activity {
             if(TelephonyManager.CALL_STATE_RINGING == state) {
                 // 如果是黑名单的电话
                 if("13113609230".equals(phoneNumber)) {
-                    // 这里写自动挂断电话逻辑
+                    // 这里写自动挂断电话逻辑，可参考 ServiceEndPhoneActivity.class
                 }
             }
             // 接通
@@ -151,6 +152,27 @@ public class ServiceInterceptPhoneActivity extends Activity {
 
             }
             super.onCallStateChanged(state, phoneNumber);
+        }
+    }
+
+    /**
+     * 接收开机事件的广播接收器，就是接收开机事件（注意：广播接收器每处理一条广播就会被销毁，所以说广播接收器是多例的）
+     * 注意：静态注册广播接收器需要在AndroidManifest.xml文件中配置，配好了以后会自动创建和注册
+     */
+    public static class SystemBootBroadcastReceiver extends BroadcastReceiver {
+
+        /**
+         * 接收到开机事件回调
+         * @param context
+         * @param intent
+         */
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // 终止广播（注意：如果终止了，优先级低的广播接收器就接收不到广播了）
+            // 注意：这个函数只针对于有序广播
+            //abortBroadcast();
+            // 启动拦截黑名单电话服务
+            context.startService(new Intent(context,InterceptPhoneService.class));
         }
     }
 
