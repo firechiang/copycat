@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".event.EventKeyExampleActivity">
+
+    <EditText
+        android:id="@+id/event_key_example_activity_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="测试键盘事件（具体请查看运行日志）"
+        />
+    <Button
+        android:onClick="click2Exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2秒内连续点击两次退出"
+        />
+
+</LinearLayout>

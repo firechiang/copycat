@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 
@@ -50,6 +51,31 @@ public class EventMotionDragImageActivity extends Activity {
                     int top = v.getTop() + dy;
                     int right = v.getRight() + dx;
                     int bottom = v.getBottom() + dy;
+
+                    // 获取父视图
+                    RelativeLayout parent = (RelativeLayout)v.getParent();
+                    // 父视图最大宽度
+                    int maxRight = parent.getRight();
+                    // 父视图最大高度
+                    int maxBottom = parent.getBottom();
+
+                    // 限制不能越过边界
+                    if(left < 0) {
+                        right -= left;
+                        left = 0;
+                    }
+                    if(top < 0) {
+                        bottom -= top;
+                        top = 0;
+                    }
+                    if(right > maxRight) {
+                        left -= right - maxRight;
+                        right = maxRight;
+                    }
+                    if(bottom > maxBottom) {
+                        top -= bottom - maxBottom;
+                        bottom = maxBottom;
+                    }
                     /**
                      * 重新定位视图的位置（也就是启动视图）
                      * @param int left   距离左边的位置

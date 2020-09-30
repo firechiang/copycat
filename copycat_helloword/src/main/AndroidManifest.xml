@@ -50,7 +50,7 @@
         <!-- android:launchMode="standard"（默认启动模式，每次调用startActivity()函数就会产生一个新的实列） -->
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题） -->
-        <activity  android:name=".system_broadcast.SystemBroadcast03" android:label="@string/app_name" android:launchMode="standard">
+        <activity  android:name=".event.EventKeyExampleActivity" android:label="@string/app_name" android:launchMode="standard">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
