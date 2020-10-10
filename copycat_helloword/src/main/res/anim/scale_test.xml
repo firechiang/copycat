@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 缩放动画描述文件（宽度从0.5到1，高度从0.0到1.0，延迟1秒执行，持续2秒） -->
+<!-- fromXScale（开始时X轴上的缩放比例） -->
+<!-- fromYScale（开始时Y轴上的缩放比例） -->
+<!-- toXScale（结束时X轴上的缩放比例） -->
+<!-- startOffset（延迟1秒执行） -->
+<!-- duration（持续2秒） -->
+<!-- pivotX（%表示动画中心点坐标相对自己的百分比，px表示动画中心点坐标坐标相对绝对坐标值，%p动画中心点坐标相对父视图） -->
+<!-- fillAfter（最终停止时是否固定在最后状态） -->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXScale="0"
+    android:fromYScale="0"
+    android:toXScale="1"
+    android:toYScale="1"
+    android:startOffset="1000"
+    android:duration="2000"
+    android:pivotX="100%"
+    android:pivotY="100%"
+    android:fillBefore="true"
+    />
