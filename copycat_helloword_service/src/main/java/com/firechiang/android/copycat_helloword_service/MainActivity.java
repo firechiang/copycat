@@ -121,9 +121,11 @@ public class MainActivity extends AppCompatActivity {
              */
             SQLiteDatabase database = sqlUtil.getReadableDatabase();
             try {
+                // 匹配URI
                 int match = uriMatcher.match(uri);
                 if (match == queryNotIdCode || match == queryByIdCode) {
                     long id = database.insert("person", null, values);
+                    // 包装ID返回
                     uri = ContentUris.withAppendedId(uri, id);
                 }
             }finally{
@@ -134,11 +136,41 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+            /**
+             * 获取数据库连接并创建数据库存储文件（注意：如果数据存储文件已存在就不会创建该数据库存储文件）
+             * 注意：sqlUtil.getWritableDatabase() 和 sqlUtil.getReadableDatabase() 获取连接在正常情况下是没什么区别的，
+             * 但是如果手机空间不足了，sqlUtil.getReadableDatabase() 获取到的连接就无法使用也不会报错，而sqlUtil.getWritableDatabase()获取到的连接在插入数据时就会报错
+             */
+            SQLiteDatabase database = sqlUtil.getReadableDatabase();
+            try {
+                // 匹配URI
+                int match = uriMatcher.match(uri);
+                if (match == queryNotIdCode || match == queryByIdCode) {
+                    return database.delete("person", selection, selectionArgs);
+                }
+            }finally{
+                database.close();
+            }
             return 0;
         }
 
         @Override
         public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
+            /**
+             * 获取数据库连接并创建数据库存储文件（注意：如果数据存储文件已存在就不会创建该数据库存储文件）
+             * 注意：sqlUtil.getWritableDatabase() 和 sqlUtil.getReadableDatabase() 获取连接在正常情况下是没什么区别的，
+             * 但是如果手机空间不足了，sqlUtil.getReadableDatabase() 获取到的连接就无法使用也不会报错，而sqlUtil.getWritableDatabase()获取到的连接在插入数据时就会报错
+             */
+            SQLiteDatabase database = sqlUtil.getReadableDatabase();
+            try {
+                // 匹配URI
+                int match = uriMatcher.match(uri);
+                if (match == queryNotIdCode || match == queryByIdCode) {
+                    return database.update("person",values,selection,selectionArgs);
+                }
+            }finally{
+                database.close();
+            }
             return 0;
         }
 

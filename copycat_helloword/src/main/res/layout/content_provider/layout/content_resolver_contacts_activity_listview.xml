@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注意：这个ID是系统定义的ID，我们在ListActivity里面可以使用使用getListView()函数获取该ListView -->
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</ListView>
