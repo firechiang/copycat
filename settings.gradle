@@ -1,6 +1,7 @@
-include ':copycat_helloword_service'
 rootProject.name='copycat'
 include ':copycat_voice'
 include ':copycat_audio'
 include ':copycat_video'
 include ':copycat_helloword'
+include ':copycat_helloword_service'
+
