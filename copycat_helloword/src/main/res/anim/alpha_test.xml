@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 透明动画配置文件 -->
+<!-- fromAlpha（动画开始时的透明度（0 表示完全透明））-->
+<!-- toAlpha（动画结束时的透明度（1 表示不透明））-->
+<!-- duration（持续2秒） -->
+<!-- startOffset（延迟执行） -->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromAlpha="0"
+    android:toAlpha="1"
+    android:duration="2000"
+    />

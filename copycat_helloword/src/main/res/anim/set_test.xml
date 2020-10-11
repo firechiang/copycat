@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 组合动画配置（多种动画组合起来） -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 透明动画 -->
+    <!-- fromAlpha（动画开始时的透明度（0 表示完全透明））-->
+    <!-- toAlpha（动画结束时的透明度（1 表示不透明））-->
+    <!-- duration（持续2秒） -->
+    <!-- startOffset（延迟执行） -->
+    <alpha android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="2000"
+        />
+
+    <!-- 旋转动画 -->
+    <!-- fromDegrees（从哪个角度开始旋转）-->
+    <!-- toDegrees（旋转到哪个角度结束）-->
+    <!-- startOffset（延迟执行） -->
+    <!-- duration（持续2秒） -->
+    <!-- pivotX或pivotY（%表示动画中心点坐标相对自己的百分比，没有单位或px表示动画中心点坐标坐标相对绝对坐标值，%p动画中心点坐标相对父视图） -->
+    <rotate android:fromDegrees="0"
+        android:toDegrees="360"
+        android:duration="2000"
+        android:pivotX="100%"
+        android:pivotY="100%"/>
+</set>

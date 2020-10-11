@@ -33,6 +33,7 @@
             android:textAllCaps="false"
             android:text="代码方式实现Rotate（旋转）动画"
             android:layout_weight="1"
+            android:onClick="rotateCode"
             />
 
         <Button
@@ -41,6 +42,7 @@
             android:textAllCaps="false"
             android:text="XML方式实现Rotate（旋转）动画"
             android:layout_weight="1"
+            android:onClick="rotateXml"
             />
     </LinearLayout>
 
@@ -51,6 +53,7 @@
             android:textAllCaps="false"
             android:text="代码方式实现Alpha（透明）动画"
             android:layout_weight="1"
+            android:onClick="alphaCode"
             />
 
         <Button
@@ -59,6 +62,7 @@
             android:textAllCaps="false"
             android:text="XML方式实现Alpha（透明）动画"
             android:layout_weight="1"
+            android:onClick="alphaXml"
             />
     </LinearLayout>
 
@@ -69,6 +73,7 @@
             android:textAllCaps="false"
             android:text="代码方式实现Translation（平衡）动画"
             android:layout_weight="1"
+            android:onClick="translationCode"
             />
 
         <Button
@@ -77,13 +82,35 @@
             android:textAllCaps="false"
             android:text="XML方式实现Translation（平衡）动画"
             android:layout_weight="1"
+            android:onClick="translationXml"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="代码方式实现组合动画（多种动画组合起来）"
+            android:layout_weight="1"
+            android:onClick="combinationCode"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="XML方式实现组合动画（多种动画组合起来）"
+            android:layout_weight="1"
+            android:onClick="combinationXml"
             />
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试动画监听"
+        android:text="测试动画事件监听"
+        android:onClick="listenerAnimation"
         />
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="20dp">

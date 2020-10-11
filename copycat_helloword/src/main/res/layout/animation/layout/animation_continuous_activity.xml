@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".animation.AnimationContinuousActivity">
+
+    <!-- @drawable/animation_list_test（注意：这个是我们自己定义的一个连续动画效果） -->
+    <ImageView
+        android:id="@+id/animation_continuous_activity_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/animation_list_test"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout android:layout_alignParentBottom ="true" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动连续动画"
+            android:onClick="startAnimation"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="停止连续动画"
+            android:onClick="stopAnimation"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
