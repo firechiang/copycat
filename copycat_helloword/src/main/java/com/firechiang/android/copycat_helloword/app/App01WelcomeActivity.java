@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * App欢迎界面
+ * 动画示例App欢迎界面
  */
 public class App01WelcomeActivity extends Activity {
 

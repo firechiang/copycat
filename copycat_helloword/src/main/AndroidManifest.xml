@@ -144,9 +144,9 @@
 
         <activity android:name=".content_resolver.ContentResolverContactsActivity$ContactsListActivity" android:label="联系人列表"/>
 
-        <activity android:name=".app.App01BackActivity" android:label="App主界面"/>
-        <activity android:name=".app.App01NextActivity" android:label="App主界面"/>
-        <activity android:name=".app.App01CompleteActivity" android:label="App主界面"/>
+        <activity android:name=".app.App01BackActivity" android:label="App向导1界面"/>
+        <activity android:name=".app.App01NextActivity" android:label="App向导2界面"/>
+        <activity android:name=".app.App01MainActivity" android:label="App主界面"/>
     </application>
 
 </manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 平移动画配置文件（实现右边开始向左移动一个自己的宽度，以达到Activity从左边开始退出的效果） -->
+<!-- fromXDelta（动画开始X轴的位置） -->
+<!-- fromYDelta（动画开始Y轴的位置） -->
+<!-- toXDelta（动画结束X轴的位置） -->
+<!-- toYDelta（动画结束Y轴的位置） -->
+<!-- fromXDelta或fromYDelta（%表示动画中心点坐标相对自己的百分比，没有单位或px表示动画中心点坐标坐标相对绝对坐标值，%p动画中心点坐标相对父视图） -->
+<!-- startOffset（延迟执行） -->
+<!-- duration（持续2秒） -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="0"
+    android:fromYDelta="0"
+    android:toXDelta="-100%"
+    android:toYDelta="0"
+    android:duration="2000"
+    />

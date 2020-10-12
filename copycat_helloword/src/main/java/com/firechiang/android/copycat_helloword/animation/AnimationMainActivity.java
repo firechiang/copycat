@@ -58,7 +58,7 @@ public class AnimationMainActivity extends Activity {
         // 最终停止时是否固定在起始状态
         scaleAnimation.setFillBefore(true);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））
@@ -113,7 +113,7 @@ public class AnimationMainActivity extends Activity {
         // 持续2秒
         rotateAnimation.setDuration(2000);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））
@@ -158,7 +158,7 @@ public class AnimationMainActivity extends Activity {
         // 持续2秒
         alphaAnimation.setDuration(2000);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））
@@ -211,7 +211,7 @@ public class AnimationMainActivity extends Activity {
         // 持续2秒
         translateAnimation.setDuration(2000);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））
@@ -279,7 +279,7 @@ public class AnimationMainActivity extends Activity {
         // 动画重复执行次数（Animation.INFINITE（无限循环执行））
         //rotateAnimation.setRepeatCount(2);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））
@@ -330,7 +330,7 @@ public class AnimationMainActivity extends Activity {
         // 动画重复执行次数（Animation.INFINITE（无限循环执行））
         //rotateAnimation.setRepeatCount(1);
         /**
-         * 设置动画篡改器
+         * 设置动画篡改器（注意：动画篡改器可以使用Xml配置示列文件 /res/anim/cycle_7.xml）
          * new AccelerateInterpolator（加速执行动画）
          * new DecelerateInterpolator（减速执行动画）
          * new LinearInterpolator（线性平滑（就是如果动画多次执行它不会有间隔的感觉））

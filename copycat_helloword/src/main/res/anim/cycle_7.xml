@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 动画篡改器（周期循环变化的篡改器） -->
+<!-- android:cycles="7"（表示动画循环7次） -->
+<cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="7"
+    />

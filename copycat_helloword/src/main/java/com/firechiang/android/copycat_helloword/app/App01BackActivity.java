@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * App向导1界面
+ * 动画示例App向导1界面
  */
 public class App01BackActivity extends AppCompatActivity {
 
@@ -26,5 +26,11 @@ public class App01BackActivity extends AppCompatActivity {
      */
     public void nextAction(View view) {
         startActivity(new Intent(this,App01NextActivity.class));
+        /**
+         * 指定显示和退出2个Activity的动画
+         * @param enterAnim 要显示的Activity的动画
+         * @param exitAnim  要关闭的Activity的动画
+         */
+        overridePendingTransition(R.anim.translate_activity_in_right,R.anim.translate_activity_out_left);
     }
 }
