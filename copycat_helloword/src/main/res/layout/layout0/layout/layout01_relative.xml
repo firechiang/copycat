@@ -14,9 +14,8 @@ android:layout_centerInParent="true"                        (相对父容器垂�
 android:layout_centerHorizontal="true"                      (相对父容器水平居中显示)
 android:layout_centerVertical="true"                        (相对父容器垂直居中显示)
 
-设置在某两视图的中间
-android:layout_above ="@+id/panelBottom"                   （设置底部视图的id）
-android:layout_below ="@+id/panelAbove"                    （设置顶部视图的id）
+android:layout_above ="@+id/panelBottom"                   （在某个视图的底部）
+android:layout_below ="@+id/panelAbove"                    （在某个视图的顶部）
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

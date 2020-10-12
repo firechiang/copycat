@@ -4,14 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
-import android.view.animation.CycleInterpolator;
-import android.view.animation.DecelerateInterpolator;
-import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
@@ -109,7 +105,7 @@ public class AnimationMainActivity extends Activity {
          */
         RotateAnimation rotateAnimation = new RotateAnimation(0,360,Animation.ABSOLUTE,imageView.getWidth() / 2, Animation.ABSOLUTE,imageView.getHeight() / 2);
         // X轴坐标的相对类型使用Animation.RELATIVE_TO_SELF，中心点和相对视图在X轴上的偏移量是0.5说明是绕自己的中心旋转
-        //RotateAnimation rotateAnimation = new RotateAnimation(-90,90,Animation.ABSOLUTE,0.5f, Animation.ABSOLUTE,0.5f);
+        //RotateAnimation rotateAnimation = new RotateAnimation(-90,90,Animation.RELATIVE_TO_SELF,0.5f, Animation.RELATIVE_TO_SELF,0.5f);
         // 延迟1秒执行
         rotateAnimation.setStartOffset(1000);
         // 动画重复执行次数（Animation.INFINITE（无限循环执行））

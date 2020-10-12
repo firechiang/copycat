@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 旋转图片动画配置文件（旋转图片以达到Loading的效果） -->
+<!-- fromDegrees（从哪个角度开始旋转）-->
+<!-- toDegrees（旋转到哪个角度结束）-->
+<!-- startOffset（延迟执行） -->
+<!-- duration（持续2秒） -->
+<!-- pivotX或pivotY（%表示动画中心点坐标相对自己的百分比，没有单位或px表示动画中心点坐标坐标相对绝对坐标值，%p动画中心点坐标相对父视图） -->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/app_loading"/>

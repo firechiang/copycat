@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.App01BackActivity">
+
+    <!-- android:layout_centerHorizontal（是否水平居中） -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="向导1界面"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!-- layout_alignParentBottom（是否在父容器的底部） -->
+    <!-- android:layout_alignParentRight（是否在父容器的右边） -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="nextAction"
+        />
+
+
+</RelativeLayout>
