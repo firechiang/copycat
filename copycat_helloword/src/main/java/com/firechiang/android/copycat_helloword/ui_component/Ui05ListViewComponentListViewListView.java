@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
@@ -31,6 +32,17 @@ public class Ui05ListViewComponentListViewListView extends ListActivity {
         setListAdapter(adapter);
         // 给单个选项添加长按事件
         getListView().setOnItemLongClickListener(new ItemLongClickListener());
+        // 滑到最底部的事件
+        getListView().setOnScrollListener(new AbsListView.OnScrollListener(){
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+            }
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+            }
+        });
     }
 
     public class AppAdapter extends BaseAdapter {
@@ -73,6 +85,7 @@ public class Ui05ListViewComponentListViewListView extends ListActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             if(convertView == null) {
                 convertView = new TextView(Ui05ListViewComponentListViewListView.this);
+                // 注意：最好是写一个ViewHolder类里面存储的全部是该列表项里面的视图，然后利用 convertView.setTag(); 将ViewHolder存起来，以后直接从convertView.getTag()里面取视图而不是用findViewById
             }
             TextView textView = (TextView)convertView;
             textView.setText(data.get(position));
