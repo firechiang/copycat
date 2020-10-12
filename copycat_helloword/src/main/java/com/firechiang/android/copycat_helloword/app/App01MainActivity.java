@@ -1,6 +1,7 @@
 package com.firechiang.android.copycat_helloword.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,18 +27,26 @@ public class App01MainActivity extends Activity {
     }
 
     /**
-     * 登陆按钮点击事件
+     * 点击抖动输入框
      * @param view
      */
     public void loginAction(View view) {
         String username = this.editText.getText().toString();
         // 如果输入框里面没有内容就显示抖动动画
-        if(username.isEmpty()) {
-            Animation animation = AnimationUtils.loadAnimation(this, R.anim.translate_shake);
-            // 开始动画
-            this.editText.startAnimation(animation);
-            // 清除动画
-            //this.editText.clearAnimation();
-        }
+        //if(username.isEmpty()) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.translate_shake);
+        // 开始动画
+        this.editText.startAnimation(animation);
+        // 清除动画
+        //this.editText.clearAnimation();
+        //}
+    }
+
+    /**
+     * 进入手机杀毒页面
+     * @param view
+     */
+    public void antiAction(View view) {
+        startActivity(new Intent(this,App01AntiActivity.class));
     }
 }

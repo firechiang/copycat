@@ -147,6 +147,7 @@
         <activity android:name=".app.App01BackActivity" android:label="App向导1界面"/>
         <activity android:name=".app.App01NextActivity" android:label="App向导2界面"/>
         <activity android:name=".app.App01MainActivity" android:label="App主界面"/>
+        <activity android:name=".app.App01AntiActivity" android:label="App杀毒界面"/>
     </application>
 
 </manifest>

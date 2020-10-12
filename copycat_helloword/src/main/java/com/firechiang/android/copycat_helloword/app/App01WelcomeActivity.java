@@ -46,7 +46,7 @@ public class App01WelcomeActivity extends Activity {
         // 显示动画
         showAnimation();
         // 发送一个3秒以后执行的延迟消息
-        handler.sendEmptyMessageDelayed(sendStart,3000);
+        handler.sendEmptyMessageDelayed(sendStart,2000);
     }
 
     /**

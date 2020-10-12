@@ -10,15 +10,24 @@
         android:id="@+id/app01_main_activity_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="用户名"
+        android:hint="点击下面的按钮抖动输入框"
+        />
+
+    <Button
+        android:id="@+id/app01_main_activity_button01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="点击抖动输入框"
+        android:onClick="loginAction"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="登陆"
-        android:onClick="loginAction"
+        android:layout_above="@id/app01_main_activity_button01"
+        android:text="进入手机杀毒页面"
+        android:onClick="antiAction"
         />
 
 </RelativeLayout>
