@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".canvas.GraphicalImageActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="测试Bitmap"
+        android:onClick="testBitmap"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="使用Matrix缩放，旋转，平移图片"
+        android:onClick="testImageScale"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="使用Shape制作图形（类似于CSS的应用）"
+        android:onClick="testShapeButton"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Selector+Shape或Selector+Drawable（就是类似于鼠标按下一个样式和鼠标抬起一个样式简单使用）"
+        android:onClick="testSelectorShapeButton"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="9patch图片操作相关（注意：9patch图片的应用场景是保证图片不会被拉伸所导致图片模糊与失真）"
+        android:onClick="test9patch"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="绘制自定义图形"
+        android:onClick="drawCustomGraphics"
+        />
+
+
+</LinearLayout>

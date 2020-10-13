@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".canvas.GraphicalImageActivity04Selector">
+
+    <!-- @drawable/selector_drawable（这个是我们自定义的选择性样式就是鼠标按下去是一个样式，没按下去又是另一个样式） -->
+    <!-- 注意：一定要有点击事件发送到这个视图上来，否则没有效果。要想点击事件被发送到这个视图上来可以指定 android:clickable="true" 或在此视图上监听点击事件 android:onClick="xxx" -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_drawable"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        />
+
+    <!-- @drawable/selector_shape（这个是我们自定义的选择性样式就是鼠标按下去是一个样式，没按下去又是另一个样式） -->
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="鼠标按下会有样式切换"
+        android:background="@drawable/selector_shape"
+        />
+</LinearLayout>

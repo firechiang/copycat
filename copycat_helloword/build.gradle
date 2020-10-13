@@ -42,7 +42,8 @@ android {
                            'src/main/res/layout/system_broadcast',
                            'src/main/res/layout/content_provider',
                            'src/main/res/layout/animation',
-                           'src/main/res/layout/app']
+                           'src/main/res/layout/app',
+                           'src/main/res/layout/canvas']
         }
     }
 }

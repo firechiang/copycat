@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".canvas.GraphicalImageActivity02Matrix">
+
+    <!-- android:scaleType="matrix"（指定缩放类型为 Matrix，否则使用Matrix将无法缩放） -->
+    <ImageView
+        android:id="@+id/graphical_image_activity_02_matrix_image01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="matrix"
+        android:src="@drawable/app08"
+    />
+
+    <Button
+        android:id="@+id/graphical_image_activity_02_matrix_button01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放"
+        android:layout_alignParentBottom="true"
+        android:onClick="actionScale"
+        />
+
+    <Button
+        android:id="@+id/graphical_image_activity_02_matrix_button02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="平移"
+        android:layout_above="@id/graphical_image_activity_02_matrix_button01"
+        android:onClick="actionTranslation"
+        />
+
+    <Button
+        android:id="@+id/graphical_image_activity_02_matrix_button03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转"
+        android:layout_above="@id/graphical_image_activity_02_matrix_button02"
+        android:onClick="actionRotate"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="还原"
+        android:layout_above="@id/graphical_image_activity_02_matrix_button03"
+        android:onClick="actionReset"
+        />
+
+</RelativeLayout>

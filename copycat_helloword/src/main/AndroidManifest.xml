@@ -54,7 +54,7 @@
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题，会有信号栏） -->
         <!-- android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"（没有标题栏且铺满全屏的主题（连信号栏都没有了）） -->
-        <activity  android:name=".app.App01WelcomeActivity" android:label="@string/app_name" android:launchMode="standard" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <activity  android:name=".canvas.GraphicalImageActivity" android:label="@string/app_name" android:launchMode="standard" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->
@@ -148,6 +148,14 @@
         <activity android:name=".app.App01NextActivity" android:label="App向导2界面"/>
         <activity android:name=".app.App01MainActivity" android:label="App主界面"/>
         <activity android:name=".app.App01AntiActivity" android:label="App杀毒界面"/>
+
+
+        <activity android:name=".canvas.GraphicalImageActivity01Bitmap" android:label="Bitmap加载张图片数据到内存中和封装Bitmap对象"/>
+        <activity android:name=".canvas.GraphicalImageActivity02Matrix" android:label="使用Matrix缩放，旋转，平移图片"/>
+        <activity android:name=".canvas.GraphicalImageActivity03Shap" android:label="使用Shape制作图形（类似于CSS的应用）"/>
+        <activity android:name=".canvas.GraphicalImageActivity04Selector" android:label="Selector+Shape或Selector+Drawable（就是类似于鼠标按下一个样式和鼠标抬起一个样式简单使用）"/>
+        <activity android:name=".canvas.GraphicalImageActivity05Patch9" android:label="9patch图片操作相关（注意：9patch图片的应用场景是保证图片不会被拉伸所导致图片模糊与失真）"/>
+        <activity android:name=".canvas.GraphicalImageActivity06CustomGraphics" android:label="绘制自定义图形"/>
     </application>
 
 </manifest>

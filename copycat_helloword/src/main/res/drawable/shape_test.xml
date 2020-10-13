@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 使用Shape定义图形（注意：这个可以直接应用到视图，像CSS一样）,使用示列：<Button android:background="@drawable/shape_test"/> -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 指定4个角的半径（这样写4个角就变成了圆角） -->
+    <corners android:radius="10dp"/>
+    <!-- 指定内部颜色填充 -->
+    <solid android:color="#ff0000"/>
+    <!-- 指定边框 android:color（边框颜色），android:width（边框宽度），android:dashWidth（单个虚线的长度），android:dashGap（虚线之间的距离） -->
+    <stroke
+        android:color="@android:color/black"
+        android:width="1dp"
+        android:dashWidth="3dp"
+        android:dashGap="2dp"
+        />
+    <!-- 指定内边距 -->
+    <padding
+        android:left="5dp"
+        android:top="5dp"
+        android:right="5dp"
+        android:bottom="5dp"
+        />
+    <!-- 指定默认尺寸（注意：这个只在 android:layout_height="wrap_content" 情况下生效）-->
+    <size android:width="50dp" android:height="50dp"/>
+    <!-- 内部渐变色填充 android:startColor（开始的颜色），android:centerColor（中间的颜色），android:endColor（结束的颜色），android:angle（色变的方向） -->
+    <gradient
+        android:startColor="#ffffff"
+        android:centerColor="#ff8c00"
+        android:endColor="#ffffff"
+        android:angle="0"
+        />
+</shape>

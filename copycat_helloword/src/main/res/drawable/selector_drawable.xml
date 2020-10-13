@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义类似于一个鼠标按下一个样式，鼠标抬起一个样式的效果（使用图片切换） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- android:state_pressed="true"（鼠标按下显示） -->
+    <item android:state_pressed="true" android:drawable="@drawable/app08"></item>
+    <!-- 正常显示（注意：正常显示的一定要写在下面否则无法显示效果） -->
+    <item android:drawable="@drawable/app06"></item>
+</selector>

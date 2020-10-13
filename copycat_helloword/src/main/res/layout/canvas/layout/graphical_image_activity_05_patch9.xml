@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".canvas.GraphicalImageActivity05Patch9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="正常图片不是9patch图片（注意：这个图片会被拉伸而失真）"
+        android:background="@mipmap/patch_normal"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9patch图片（注意：这个图片不会被拉伸而失真）"
+        android:background="@drawable/patch"
+        />
+
+
+
+</LinearLayout>

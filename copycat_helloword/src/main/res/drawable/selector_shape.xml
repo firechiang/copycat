@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义类似于一个鼠标按下一个样式，鼠标抬起一个样式的效果（使用Shape（类似于CSS样式）切换） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- android:state_pressed="true"（鼠标按下显示） -->
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 指定4个角的半径（这样写4个角就变成了圆角） -->
+            <corners android:radius="20dp"/>
+            <!-- 指定内部颜色填充 -->
+            <solid android:color="#ff0000"/>
+            <!-- 指定边框 android:color（边框颜色），android:width（边框宽度），android:dashWidth（单个虚线的长度），android:dashGap（虚线之间的距离） -->
+            <stroke
+                android:color="@android:color/black"
+                android:width="1dp"
+                android:dashWidth="3dp"
+                android:dashGap="2dp"
+                />
+            <!-- 指定内边距 -->
+            <padding
+                android:left="5dp"
+                android:top="5dp"
+                android:right="5dp"
+                android:bottom="5dp"
+                />
+            <!-- 指定默认尺寸（注意：这个只在 android:layout_height="wrap_content" 情况下生效）-->
+            <size android:width="50dp" android:height="50dp"/>
+            <!-- 内部渐变色填充 android:startColor（开始的颜色），android:centerColor（中间的颜色），android:endColor（结束的颜色），android:angle（色变的方向） -->
+            <gradient
+                android:startColor="#ffffff"
+                android:centerColor="#ff8c00"
+                android:endColor="#ffffff"
+                android:angle="0"
+                />
+        </shape>
+    </item>
+
+    <!-- 正常显示（注意：正常显示的一定要写在下面否则无法显示效果） -->
+    <item>
+        <shape>
+            <!-- 指定4个角的半径（这样写4个角就变成了圆角） -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>
