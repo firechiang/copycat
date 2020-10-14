@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#DDDDDD">
+
+    <!-- android:gravity="center"（子组件居中显示） -->
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_uninstall"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卸载"
+            />
+    </LinearLayout>
+
+    <!-- 中间的线 -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#CCCCCC" />
+
+    <!-- android:gravity="center"（子组件居中显示） -->
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_run"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运行"
+            />
+    </LinearLayout>
+
+    <!-- 中间的线 -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#CCCCCC" />
+
+    <!-- android:gravity="center"（子组件居中显示） -->
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_share"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享"
+            />
+    </LinearLayout>
+
+</LinearLayout>
