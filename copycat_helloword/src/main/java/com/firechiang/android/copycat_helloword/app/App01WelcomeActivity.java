@@ -90,4 +90,16 @@ public class App01WelcomeActivity extends Activity {
         // 清除动画
         //imageView.clearAnimation();
     }
+
+    /**
+     * Activity销毁时移除所有未处理消息
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // 移除指定消息
+        //handler.removeMessages(sendStart);
+        // 移除所有未处理消息
+        handler.removeCallbacksAndMessages(null);
+    }
 }
