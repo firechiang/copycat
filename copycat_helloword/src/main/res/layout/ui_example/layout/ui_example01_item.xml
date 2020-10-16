@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 相对布局，android:padding="10dp"（内边距可使单个选项的字体和图片垂直居中一些） -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:orientation="horizontal">
+    <!-- 相对布局，android:padding="10dp"（内边距可使单个选项的字体和图片垂直居中一些） -->
+    <RelativeLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/ui_example01_item_relative_layout">
+        <ImageView
+            android:id="@+id/ui_example01_item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
 
-    <ImageView
-        android:id="@+id/ui_example01_item_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        />
+        <!-- android:layout_toRightOf="@+id/ui_example01_item_image"（在ID=ui_example01_item_image的组件右边）,android:layout_centerVertical="true"（垂直居中）-->
+        <TextView
+            android:id="@+id/ui_example01_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ui_example01_item_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
 
-    <!-- android:layout_toRightOf="@+id/ui_example01_item_image"（在ID=ui_example01_item_image的组件右边）,android:layout_centerVertical="true"（垂直居中）-->
-    <TextView
-        android:id="@+id/ui_example01_item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/ui_example01_item_image"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:textSize="20sp"
-        />
+    <LinearLayout android:orientation="horizontal" android:textSize="20sp" android:layout_width="0dp" android:layout_height="match_parent" android:id="@+id/ui_example01_item_button">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33CC33"
+            android:gravity="center"
+            android:text="修改"
+            />
 
-</RelativeLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF3300"
+            android:gravity="center"
+            android:text="删除"
+            />
+    </LinearLayout>
+</LinearLayout>
