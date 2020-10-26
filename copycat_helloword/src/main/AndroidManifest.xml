@@ -55,7 +55,16 @@
         <!-- android:theme="@style/ImageTextView"（指定主题，其实就是指定公共样式） -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"（没有标题栏的主题，会有信号栏） -->
         <!-- android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"（没有标题栏且铺满全屏的主题（连信号栏都没有了）） -->
-        <activity  android:name=".ui_example.UiExample04Activity" android:label="@string/app_name" android:launchMode="standard" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize"（切换横竖屏时 orientation=（方向改变），keyboardHidden=（键盘方向改变），screenSize=（屏幕大小自动变化）） -->
+        <!-- android:screenOrientation="landscape"（规定手机只能横屏显示） -->
+        <!-- android:screenOrientation="portrait"（规定手机只能竖屏显示） -->
+        <activity
+            android:name=".ui_example.UiExample04Activity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
             <!-- 意图过滤器 -->
             <intent-filter>
                 <!-- android.intent.action.MAIN（让当前这个Activity成为主Activity） -->

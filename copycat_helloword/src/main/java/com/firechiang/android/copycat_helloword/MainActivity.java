@@ -1,7 +1,9 @@
 package com.firechiang.android.copycat_helloword;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -45,5 +47,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    /**
+     * 横竖屏切换时调用
+     * @param newConfig
+     */
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // 切换到横屏
+        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+        }
+        // 切换到竖屏
+        if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }
+        // 手动切换到横屏
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        // 手动切换到竖屏
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }
