@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- android:name="com.firechiang.android.copycat_helloword.fragments.TestFragments1"（指定自定义Fragment的完整类路径） -->
+    <fragment
+        android:id="@+id/test_fragments_1"
+        android:name="com.firechiang.android.copycat_helloword.fragments.TestFragments1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        />
+
+    <!-- android:name="com.firechiang.android.copycat_helloword.fragments.TestFragments1"（指定自定义Fragment的完整类路径） -->
+    <fragment
+        android:id="@+id/test_fragments_2"
+        android:name="com.firechiang.android.copycat_helloword.fragments.TestFragments2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

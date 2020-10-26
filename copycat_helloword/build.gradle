@@ -43,7 +43,8 @@ android {
                            'src/main/res/layout/content_provider',
                            'src/main/res/layout/animation',
                            'src/main/res/layout/app',
-                           'src/main/res/layout/canvas']
+                           'src/main/res/layout/canvas',
+                           'src/main/res/layout/fragments']
         }
     }
 }
