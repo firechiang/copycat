@@ -120,10 +120,10 @@ public class UI06ImitateViewPageView extends ViewGroup {
                 float distanceX = Math.abs(endX - downX);
                 float distanceY = Math.abs(endY - downY);
 
-                // 如果是左右滑动
+                // 如果是左右滑动（返回ture,拦截事件，将会触发当前控件的onTouchEvent()方法）
                 if(distanceX > distanceY&&  distanceX >5){
                     result = true;
-                // 上下滑动（滚动滚动条）
+                // 上下滑动（滚动滚动条）返回false,不拦截事件，事件继续传递给孩子
                 }else{
                     scrollToPager(currentIndex);
                 }
