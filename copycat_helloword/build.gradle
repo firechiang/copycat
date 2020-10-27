@@ -44,7 +44,8 @@ android {
                            'src/main/res/layout/animation',
                            'src/main/res/layout/app',
                            'src/main/res/layout/canvas',
-                           'src/main/res/layout/fragments']
+                           'src/main/res/layout/fragments',
+                           'src/main/res/layout/ui_component_senior']
         }
     }
 }
