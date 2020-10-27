@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui_component.UI07TabLayoutComponent"
+    android:orientation="vertical">
+
+    <!-- 引入其它布局文件 -->
+    <include layout="@layout/ui07_tab_layout_component_titlebar"/>
+
+    <!-- 这个组件使用了 group: 'com.android.support', name: 'design', version: '28.0.0' 包 -->
+    <!-- app:tabTextColor="@android:color/white"（原始字体的颜色） -->
+    <!-- app:tabIndicatorColor="@android:color/holo_red_dark"（选择后下滑线的颜色） -->
+    <!-- app:tabSelectedTextColor="@android:color/holo_red_dark"（选择后字体的颜色） -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/ui07_tab_layout_component_tablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        app:tabIndicatorColor="@android:color/holo_red_dark"
+        app:tabSelectedTextColor="@android:color/holo_red_dark"
+        app:tabTextColor="@android:color/white"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ui07_tab_layout_component_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

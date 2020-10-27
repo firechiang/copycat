@@ -8,7 +8,8 @@ import androidx.fragment.app.FragmentActivity;
 import com.firechiang.android.copycat_helloword.R;
 
 /**
- * 静态加载组合Fragment（视图碎片）
+ * 静态加载组合Fragment（视图碎片）（注意：包含Fragment的Activity一定要从FragmentActivity继承）
+ *
  */
 public class FragmentsStaticActivity extends FragmentActivity {
 
