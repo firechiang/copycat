@@ -59,7 +59,7 @@
         <!-- android:screenOrientation="landscape"（规定手机只能横屏显示） -->
         <!-- android:screenOrientation="portrait"（规定手机只能竖屏显示） -->
         <activity
-            android:name=".ui_component_senior.UI05CustomProperties"
+            android:name=".ui_component_senior.UI06ImitateViewPage"
             android:label="@string/app_name"
             android:launchMode="standard"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
