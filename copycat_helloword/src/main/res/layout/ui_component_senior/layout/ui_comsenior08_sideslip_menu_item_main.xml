@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.firechiang.android.copycat_helloword.ui_component_senior.UI08SideslipMenuSlideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <include android:id="@+id/ui_comsenior08_sideslip_menu_item_main_item_content" layout="@layout/ui_comsenior08_sideslip_menu_item_content"/>
+    <include android:id="@+id/ui_comsenior08_sideslip_menu_item_main_item_menu" layout="@layout/ui_comsenior08_sideslip_menu_item_menu"/>
+
+</com.firechiang.android.copycat_helloword.ui_component_senior.UI08SideslipMenuSlideLayout>
