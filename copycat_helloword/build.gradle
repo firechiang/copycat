@@ -48,6 +48,10 @@ android {
                            'src/main/res/layout/ui_component_senior']
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
