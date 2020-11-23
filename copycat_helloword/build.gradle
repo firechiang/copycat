@@ -49,6 +49,9 @@ android {
         }
     }
 
+    /**
+     * 开启视图绑定(就是类实现 ViewBinding 接口，在类里面使用 final 修饰成员变量就可接收组件，名字和ID相同即可，不需要再使用findViewById()函数)
+     */
     buildFeatures {
         viewBinding = true
     }
